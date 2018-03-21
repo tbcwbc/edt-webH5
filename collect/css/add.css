@@ -1,0 +1,78 @@
+/*年度回馈 圣诞大礼*/
+.text1{
+    background-color: #b60031;
+    width: 26em;
+    height: 13em;
+    border-radius: 0 0 13em 13em;
+    text-align: center;
+      margin: -2em  auto 0 auto;
+}
+
+.text2{
+    background-color: #b60031;
+    width: 26em;
+    height: 26em;
+    border-radius:13em;
+    text-align: center;
+    margin: 0 auto;
+}
+.text3{
+    background-color: #b60031;
+    width: 26em;
+    height: 13em;
+    border-radius:13em  13em 0 0;
+    text-align: center;
+    margin: 0 auto;
+}
+.huilui img{
+    margin-top: 5em;
+    width: 80%;
+		}
+.sales {
+	width: 70%;
+	margin-top: 5em;
+		}
+.btn{
+	width: 30%;
+	margin-top: 1.5em;
+		
+		}
+.shijian img{
+	width: 80%;
+	position: absolute;
+	top: 83%;
+	margin-top: 4.6em;
+	left: 2.7em;
+			
+		}
+.zhezhao{
+			position: fixed;
+			background-color: rgba(0,0,0,0.6);
+			left: 0;
+			top: 0;
+			min-width: 100%;
+			min-height: 100%;
+			z-index: 1000;
+            }
+		.jiantou img{
+			width: 20%;
+			position: absolute;
+			right:20px;
+			top: 20px;
+		}
+
+/*二维码		*/
+ p{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	margin-top: 8em;
+	margin-bottom: 1em;
+	color: #fff;
+	letter-spacing: 1px;
+	 font-family: "黑体-日本语 细体"
+		}
+.code img{
+	text-align: center;
+	
+		}

@@ -1,0 +1,85 @@
+* {
+    font-family: Hiragino Sans GB, Microsoft YaHei, Arial, Helvetica, sans-serif
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.text {
+    font-size: 1.2em;
+}
+
+.scroll-content {
+    position: relative;
+    width: 100%;
+    height: 90%;
+    overflow-y: scroll;
+    margin-top: auto;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    bottom: 0;
+    background: #dddddd;
+    overflow: hidden;
+}
+
+.input1{
+    margin-left: 2%;
+    margin-top: 20%;
+    width: 95%
+}
+
+.input-row{
+    margin-top:10px;
+}
+
+.input-form{
+    margin-top: -22px;
+    margin-left: 80px;
+}
+
+.input-name{
+    position:relative;
+}
+
+.input-form .small{
+    width:95%;
+    height:26px;
+    border:#c4c4c4 2px solid;
+    border-radius:8px;
+    color:#000;
+    font-size:17px;
+    font-family: 'Hiragino Sans GB';
+}
+
+input:focus {
+    outline:none;
+}
+
+.radio {
+    height: 15px;
+    background-size: 15px 15px;
+    background-image: url(/images/nochance@3x.png);
+    background-repeat: no-repeat;
+}
+
+.wrap{
+    margin-top: -6.5%;
+    word-wrap: break-word;
+    width: 95%;
+    margin-left: 10%;
+}
+
+.own-img{
+    height: 50px;
+    background-size: 50px 50px;
+    background-image: url(/images/+@3x.png);
+    background-repeat: no-repeat;
+}

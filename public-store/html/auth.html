@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>麦卡伦官方微商城</title>
+    <link rel="stylesheet" href="../css/remind.css">
+  </head>
+
+  <body>
+
+  </body>
+  <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="../js/wechat_auth.js"></script>
+  <script type="text/javascript" src="../js/until.js"></script>
+  <script type="text/javascript" src="../js/app/config.js"></script>
+  <script>
+    $(function() {
+    	//授权
+    localStorage.clear();
+      wechatapi.loadingBox();
+      var urlParam = API.host+API.pathname+"brand.html?cId="+cId;
+      wechat.init_auth(cId, urlParam, function() {
+        wechatapi.closeLoading();
+      });
+    })
+  </script>
+
+</html>

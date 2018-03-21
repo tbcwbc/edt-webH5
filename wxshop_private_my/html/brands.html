@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>爱丁顿贵宾微商城</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/until.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <style>
+      .wrapper {
+        height: 100%;
+      }
+      
+      .swiper-slide img {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="swiper-container wrapper">
+      <ul class="swiper-wrapper swiper-wrapper-hook">
+      </ul>
+      <!-- 如果需要导航按钮 -->
+      <div class="swiper-button-prev">
+      </div>
+      <div class="swiper-button-next">
+      </div>
+    </div>
+
+  </body>
+  <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="../js/wechat_auth.js"></script>
+  <script type="text/javascript" src="../js/until.js"></script>
+  <script type="text/javascript" src="../js/app/config.js"></script>
+  <script type="text/javascript" src="../js/swiper.min.js"></script>
+  <script>
+    var app = {
+      init: function() {
+        wechat.init_auth(cId, function() {
+          app.login();
+          app.getBrands();
+        });
+
+        $("img").on('click', app.goBrand);
+      },
+      //自动登陆
+      login: function() {
+        wechat.post_data(API.gateway + API.login + cId, {}, function(response) {
+          console.log(response);
+          if(response.code == ERR_OK) {
+            localStorage.setItem('USERINFO', JSON.stringify(response.data));
+            //    查询购物车订单数量
+          }
+        }, function(err) {
+          //  	alert(JSON.stringify(err));
+        });
+      },
+      goBrand: function(e) {
+        localStorage.setItem('categoryId', e.target.alt);
+        window.location.href = 'brand.html?cId=' + cId;
+      },
+      // 获取品牌列表
+      getBrands: function() {
+        var param = "?companyId=" + cId + "&store=private";
+        wechat.get_data(API.gateway + API.categoryList + param, function(response) {
+          console.log(response);
+          if(response.code == ERR_OK) {
+            app.fillData(response.data);
+          }
+        });
+      },
+      fillData: function(data) {
+        var html = "";
+        data.forEach(function(obj) {
+          html += "<li class='swiper-slide'><img alt='" + obj.id + "' src='" + obj.privateStoreImage + "'/></li>";
+        });
+        $(".swiper-wrapper-hook").append(html);
+      }
+    };
+    app.init();
+    var swiper = new Swiper('.swiper-container', {
+      loop: false,
+      // 如果需要前进后退按钮
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+
+</html>

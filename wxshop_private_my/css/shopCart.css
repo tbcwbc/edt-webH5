@@ -1,0 +1,263 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  overflow: auto;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+
+/*头部*/
+
+.wrapper .header-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 4rem;
+  line-height: 4rem;
+  font-size: 1.4rem;
+  z-index: 100;
+  background-color: #fff;
+}
+
+.wrapper .header-wrapper .header {
+  position: relative;
+  margin: 0 1.5rem;
+  height: 100%;
+  background-color: #fff;
+}
+
+.wrapper .header label {
+  position: relative;
+  display: block;
+  width: 10%;
+  height: 100%;
+  padding-left: 2.2rem;
+  line-height: 4rem;
+  background: #fff;
+}
+
+.wrapper .header .is-check {
+  position: absolute;
+  width: 1.7rem;
+  height: 1.7rem;
+  left: 0;
+  top: 1.1rem;
+}
+
+.wrapper .header input[type=checkbox] {
+  position: absolute;
+  top: .75rem;
+  left: -.3rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.wrapper .header .edit {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+
+/*商品列表*/
+
+.content-wrapper {
+  position: fixed;
+  top: 4rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  bottom: 9.5rem;
+  overflow: hidden;
+}
+
+.content-wrapper .top-tip {
+  position: absolute;
+  top: -4rem;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  color: #555;
+}
+
+.content-wrapper .bottom-tip {
+  width: 100%;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  text-align: center;
+  color: #777;
+  background: #f2f2f2;
+}
+
+.goods .good-item {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 10rem;
+  width: 120%;
+  margin-bottom: 1px;
+  background-color: rgba(244, 244, 244, .9);
+}
+
+.goods .good-item .check {
+  position: relative;
+  /*visibility: hidden;*/
+  width: 4rem;
+}
+
+.goods .good-item .check input[type=checkbox] {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  left: 1rem;
+  top: 3.75rem;
+}
+
+.goods .good-item .check .is-check {
+  position: absolute;
+  width: 1.8rem;
+  height: 2.1rem;
+  left: 1.4rem;
+  top: 3.9rem;
+}
+
+.goods .good-item .good-info {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 1rem 0;
+}
+
+.goods .good-item .good-info .img-wrapper {
+  display: inline-block;
+  width: 8rem;
+  height: 8rem;
+}
+
+.goods .good-item .good-info .img-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+.goods .good-item .good-info .good-desc {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  margin-top: 1.4rem;
+  margin-left: .9rem;
+  line-height: 1.7rem;
+}
+
+.goods .good-item .good-info .good-desc p {
+  width: 50%;
+}
+
+.goods .good-item .good-info .good-desc .price {
+  font-size: 1.2rem;
+  color: #F05050;
+}
+
+.goods .good-item .good-info .good-desc>.count {
+  position: absolute;
+  top: 0;
+  right: 1.5rem;
+  font-style: normal;
+  color: #999;
+}
+
+.goods .good-item .good-info .edit-wrapper {
+  position: absolute;
+  top: 0;
+  right: 1.4rem;
+  line-height: 2rem;
+  text-align: center;
+}
+
+.goods .good-item .good-info .edit-wrapper .edit-count {
+  padding: 0 .6rem;
+  max-width: 1.5rem;
+  height: 2rem;
+  line-height: 2rem;
+  border: 1px solid #999;
+  border-radius: 2px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.goods .good-item .good-info .decrease,
+.goods .good-item .good-info .add {
+  position: relative;
+  display: inline-block;
+  width: 1.8rem;
+  height: 2rem;
+  vertical-align: middle;
+}
+
+.goods .good-item .good-info .decrease {
+  background: url(../images/decrease.png) no-repeat center;
+  background-size: 100%;
+}
+
+.goods .good-item .good-info .add {
+  background: url(../images/add.png) no-repeat center;
+  background-size: 100%;
+}
+
+.goods .good-item .delete-order {
+  float: right;
+  width: 15%;
+  height: 10rem;
+  line-height: 10rem;
+  text-align: center;
+  background-color: #FE3930;
+  color: #fff;
+  transition: all .4s linear;
+  font-style: normal;
+}
+
+.swipeleft {
+  -webkit-transform: translateX(-16%);
+  -o-transform: translateX(-16%);
+  -moz-transform: translateX(-16%);
+  transform: translateX(-16%);
+}
+
+.footer-wrapper {
+  bottom: 5rem;
+}
+
+.footer-wrapper .total {
+  padding-left: 1.5rem;
+  text-align: left;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.footer-wrapper .total>span {
+  margin-left: .8rem;
+}
+
+.footer-wrapper>span {
+  width: 26%;
+}
+
+.continue {
+  background-color: rgba(51, 51, 51, .5);
+}
+
+.commit,
+.delete {
+  background-color: rgb(51, 51, 51);
+}

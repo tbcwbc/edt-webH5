@@ -1,0 +1,93 @@
+.wrapper{
+	min-height: 100%;
+}
+.content-wrapper{
+	padding-bottom: 10rem;
+	font-size: 1.2rem;
+}
+.invoice-info{
+	position: relative;
+	padding: 1.1rem 1.6rem 1.4rem 1.5rem;
+	background-color: #fff;
+}
+.invoice-info .item{
+	height: 3.2rem;
+	line-height: 3.2rem;
+}
+.invoice-info .title{
+	color: #333;
+	font-style: normal;
+}
+.invoice-info  .text{
+	color: #2A2A2A;
+}
+.invoice-info .type{
+	display: inline-block;
+	float: right;
+}
+.invoice-info .timg{
+	/* padding: .5rem; */
+	width: 10rem;
+	height: 7rem;
+	/* border: 1px solid #eee; */
+}
+.invoice-info .timg img{
+	width: 100%;
+	height: auto;
+}
+.invoice-info .default{
+	position: relative;
+	padding-bottom: .9rem;
+	line-height: 1.8rem;
+	font-size: 1.3rem;
+	color: #333;
+	text-align: right;
+}
+.invoice-info .setDefault{
+	font-size:1.3rem;
+	color:#999;
+	text-align: right;
+}
+.invoice-info .setDefault label{
+	display: inline-block;
+	line-height: 1.7rem;
+	vertical-align: top;
+}
+.invoice-info .setDefault input{
+	position: absolute;
+	display: inline-block;
+	width: 1.7rem;
+	height: 1.7rem;
+	right: 7rem;
+}
+.invoice-info .setDefault .is-check{
+	position: absolute;
+	width: 1.7rem;
+	height: 1.7rem;
+	right: 7rem;
+}
+.person:not(:last-child):after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	border-top: 1px solid #eee;
+	-webkit-transform: scaleY(.5);
+  -o-transform: scaleY(.5);
+  -moz-transform: scaleY(.5);
+	transform: scaleY(.5);
+}
+.btn{
+	position: relative;
+	margin-top: -7rem;
+	/*left: 50%;*/
+	/*transform: translate(-50%);*/
+	/*bottom: 10%;*/
+}
+
+.invoiceImg{
+	width: 9rem;
+    height: 7rem;
+    margin-right: 10px;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>订单物流</title>
+    <link rel="stylesheet" href="../css/until.css">
+    <link rel="stylesheet" href="../css/orderLogistics.css">
+    <link rel="stylesheet" href="../css/remind.css">
+  </head>
+
+  <body>
+    <!--<ul class="header-hook style-ul hide">
+      <li class="package-header">
+        包裹1
+      </li>
+      <li class="package-header">
+        包裹2
+      </li>
+    </ul>-->
+    <div class="orderInfo">
+      <div class="goods-img">
+        <img src="../images/prcoduct.png" alt="" class="g-img">
+      </div>
+      <div class="order-status">
+        <p class="status-info">物流状态
+          <span>运输中</span>
+        </p>
+        <p class="order-info">运单编号：
+          <span id="logisticsNumber"></span>
+        </p>
+        <p class="order-info">承运公司：
+          <span id="companyName"></span>
+        </p>
+      </div>
+    </div>
+    <div class="logisticsInfo">
+      <ul class="logistics-list">
+        <!--<li class="logistics-status">
+          <div class="point check"></div>
+          <p class="log-info">
+            【上海浦东公司】的派件员正在安排派件，派件员：王方忠 联系电话：18603733393
+          </p>
+          <p class="log-time">2017-09-28 12:55:45</p>
+
+        </li>
+        <li class="logistics-status">
+          <div class="point"></div>
+          <p class="log-info">
+            【上海浦东公司】的派件员正在安排派件，派件员：王方忠 联系电话：18603733393
+          </p>
+          <p class="log-time">2017-09-28 12:55:45</p>
+        </li>-->
+      </ul>
+    </div>
+
+  </body>
+  <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="../js/wechat_auth.js"></script>
+  <script type="text/javascript" src="../js/app/config.js"></script>
+  <script type="text/javascript" src="../js/until.js"></script>
+  <script>
+  	var orderLogisticsId = wechat.get_url_param("orderLogisticsId");
+  	var app = {
+  		init:function(){
+//			if(orderLogisticsId.length>1){
+//				$(".header-hook").removeClass('hide');
+//			}
+  			app.getExpress();
+  			console.log(orderLogisticsId);
+  		},
+  		getExpress:function(){
+  			wechat.get_data(API.gateway + API.getExpress + orderLogisticsId,function(response){
+  				console.log(response);
+  				if(response.code == ERR_OK){
+  					app.fillData(response.data);
+  				}else{
+  					wechatapi.prompt(response.msg);
+  				}
+  			});
+  		},
+  		fillData:function(data){
+  			// 快递信息
+  			$("#logisticsNumber").html(data.orderLogistics.logisticsNumber);
+  			$("#companyName").html(data.orderLogistics.companyName);
+  			
+  			// 物流信息
+  			var html = "";
+  			data.logisticsInfo.forEach(function(obj){
+  				html += "<li class='logistics-status'><div class='point'></div><p class='log-info'>"+obj.context+"</p>";
+          html += "<p class='log-time'>"+obj.time+"</p></li>"
+  			});
+  			$(".logistics-list").append(html);
+  		}
+  	}
+  	app.init();
+  </script>
+</html>

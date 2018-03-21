@@ -1,0 +1,245 @@
+html {
+  font-size: 57.5%;
+}
+
+@media only screen and (min-width: 375px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+@media only screen and (min-width:414px) {
+  html {
+    font-size: 67%;
+  }
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #F4F4F4;
+  font-family: -apple-system-font, "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a,button,input,textarea {
+  outline: none;
+  border: 0;
+  -webkit-appearance: none;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.btn {
+  margin-left: auto;
+  margin-right: auto;
+  width: 68.3%;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  border-radius: .4rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: #333;
+}
+
+.btn-sub {
+  width: 100%;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.border-bottom-1px:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid #eee;
+  -webkit-transform: scaleY(.5);
+  -o-transform: scaleY(.5);
+  -moz-transform: scaleY(.5);
+  transform: scaleY(.5);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 5rem;
+  line-height: 1.6;
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #FFFFFF;
+  box-shadow: 0 -1px 1px 0 rgba(203, 203, 203, 0.50);
+  z-index: 200;
+}
+
+.footer li {
+  position: relative;
+  -webkit-box-flex:1;
+  -webkit-flex:1;
+  flex:1;
+  text-align: center;
+  justify-content: flex-end;
+ -webkit-justify-content: flex-end;
+}
+
+.footer li .shopCartCounts {
+  position: absolute;
+  top: .6rem;
+  left: 56%;
+  padding: .2rem;
+  min-width: 1.2rem;
+  min-height: 1.2rem;
+  line-height: 1.2rem;
+  text-align: center;
+  background: #f05050;
+  color: #fff;
+  border-radius: 12px;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+.footer li span {
+  display: inline-block;
+  margin-top: 3.4rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6rem;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.footer li.active span {
+  color: #333;
+}
+
+.footer .shop {
+  background: url("../images/shop.png") no-repeat center .7rem;
+  background-size: 2.4rem auto;
+}
+
+.footer .shop.active {
+  background: url("../images/shopSelected.png") no-repeat center .7rem;
+  background-size: 2.4rem auto;
+}
+
+.footer .cart {
+  background: url("../images/cart.png") no-repeat center .7rem;
+  background-size: 2.4rem auto;
+}
+
+.footer .cart.active {
+  background: url("../images/cartSelected.png") no-repeat center .7rem;
+  background-size: 2.4rem auto;
+}
+
+.footer .order {
+  background: url("../images/order.png") no-repeat center .7rem;
+  background-size: 2.4rem auto;
+}
+
+.footer .order.active {
+  background: url("../images/orderSelected.png") no-repeat center .7rem;
+  background-size: 2.4rem auto;
+}
+
+.footer .my {
+  background: url("../images/my.png") no-repeat center .7rem;
+  background-size: 2.4rem auto;
+}
+
+.footer .my.active {
+  background: url("../images/mySelected.png") no-repeat center .7rem;
+  background-size: 2.4rem auto;
+}
+
+.input-none {
+  opacity: 0;
+  z-index: 100;
+}
+
+.pb-4rem {
+  padding-bottom: 4.5rem;
+}
+
+.hock-next {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3.2rem;
+  height: 3.2rem;
+  line-height: 3.2rem;
+  text-align: center;
+}
+
+.hock-next .next {
+  display: inline-block;
+  width: .8rem;
+  height: .8rem;
+  border-top: 1px solid #c7c7c7;
+  border-right: 1px solid #c7c7c7;
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.is-check {
+  position: absolute;
+  background: url("../images/unchecked.png") no-repeat center;
+  background-size: 100%;
+}
+
+input:checked+.is-check {
+  background: url("../images/checked.png") no-repeat center;
+  background-size: 100%;
+}
+
+.hide {
+  display: none;
+  visibility: hidden;
+}
+
+.footer-wrapper {
+  position: fixed;
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:flex;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: rgb(195, 195, 195);
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.col-3 {
+  color: #333;
+}
+
+.col-6 {
+  color: #666;
+}
+
+.col-9 {
+  color: #999;
+}

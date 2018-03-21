@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+    <link rel="stylesheet" href="../css/weui.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/until.css">
+    <link rel="stylesheet" href="../css/remind.css">
+    <link rel="stylesheet" href="../css/shopCart.css">
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header-wrapper">
+        <div class="header">
+          <label>
+            <input type="checkbox" name="all" class="input-none"/>
+            <i class="is-check"></i>
+            全选
+        </label>
+          <span class="edit edit-hook">编辑</span>
+        </div>
+      </header>
+      <section class="content-wrapper list-wrapper-hook">
+        <div>
+          <!-- 顶部提示信息 -->
+          <div class="top-tip">
+            <span class="refresh-hook">下拉刷新</span>
+          </div>
+          <ul class="goods list-content-hook" id="goodList">
+            <!--<li class="good-item">
+              <div class="check">
+                <input type="checkbox" name="" class="input-none" />
+                <i class="is-check"></i>
+              </div>
+              <div class="good-info">
+                <div class="img-wrapper"><img src="../images/prcoduct.png" alt=""></div>
+                <div class="good-desc">
+                  <p>麦卡伦<span>晖钻</span>单一麦芽苏格兰威士忌</p>
+                  <p class="price">￥12,343</p>-->
+                  <!--<i class="count">数量<span>x2</span></i>-->
+                  <!--<div class="edit-wrapper">
+                    <i class="decrease"></i>
+                    <input class="edit-count" value="2">
+                    <i class="add"></i>
+                  </div>
+                </div>
+              </div>
+            </li>-->
+          </ul>
+          <div class="bottom-tip">
+            <span class="loading-hook">查看更多</span>
+          </div>
+        </div>
+      </section>
+      <footer class="footer-wrapper">
+        <div class="total">
+          合计<span id="total">0.00</span>
+        </div>
+        <span class="continue">继续购物</span>
+        <span class="commit">下单</span>
+        <span class="delete hide" onclick="app.deleteGood('')">删除</span>
+      </footer>
+      <!--footer-->
+      <ul class="footer hock-footer">
+        <li class="shop">
+          <span>店铺</span>
+        </li>
+        <li class="cart active">
+        	<i class="shopCartCounts hide" id="shopCartCounts"></i>
+          <span>购物车</span>
+        </li>
+        <li class="order">
+          <span>订单</span>
+        </li>
+        <li class="my">
+          <span>我</span>
+        </li>
+      </ul>
+    </div>
+    <!--列表循环-->
+    <script id="jsr" type="text/x-jsrender">
+      <!--{{:id}} 购物车列表 商品id-->
+      <!--{{:productId}} 商品id-->
+      <li class="good-item" id="{{:id}}">
+        <div class="check">
+          <input type="checkbox" name="{{:productId}}" class="input-none" onclick="app.checked({{:id}},event)" />
+          <i class="is-check"></i>
+        </div>
+        <div class="good-info">
+          <div class="img-wrapper"><img src="{{:url}}" alt=""></div>
+          <div class="good-desc">
+            <p>{{:productSimplifyName}}</p>
+            <p class="price">￥{{:~fmoney(intMoney,true)}}</p>
+            <i class="count" >数量<span data-count-id="{{:id}}">x{{:counts}}</span></i>
+            <div class="edit-wrapper hide">
+              <i class="decrease" onclick="app.decreaseCount({{:id}},{{:counts}},{{:isLimit}},{{:limitCounts}},{{:limitMoney}},event)"></i>
+              <input type="number" name="{{:id}}" class="edit-count" value="{{:counts}}" onkeyup="this.value=this.value.replace(/[^\d]/g,'') " onafterpaste="this.value=this.value.replace(/[^\d]/g,'') ">
+              <i class="add" onclick="app.addCount({{:id}},{{:counts}},{{:isLimit}},{{:limitCounts}},{{:limitMoney}},event)"></i>
+            </div>
+          </div>
+        </div>
+        <i class="delete-order" onclick="app.deleteGood({{:id}})">删除</i>
+      </li>
+    </script>
+  </body>
+  <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="../js/wechat_auth.js"></script>
+  <script type="text/javascript" src="../js/app/config.js"></script>
+  <script type="text/javascript" src="../js/until.js"></script>
+  <script type="text/javascript" src="../js/jsrender.min.js"></script>
+  <script type="text/javascript" src="../js/bscroll.min.js"></script>
+  <script type="text/javascript" src="../js/leftSlip.js"></script>
+  <script type="text/javascript" src="../js/app/shopCart.js"></script>
+
+</html>

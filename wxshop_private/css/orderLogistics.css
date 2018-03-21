@@ -1,0 +1,125 @@
+html,
+body {
+  height: auto;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  background: #fff;
+  font-size: 1.2rem;
+}
+
+.style-ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  height: 4rem;
+  background: #fff;
+  border-bottom: 1px solid #DDD;
+  font-size: 0;
+}
+
+.package-header {
+  width: 50%;
+  text-align: center;
+  display: inline-block;
+  line-height: 4rem;
+  font-size: 1.3rem;
+  box-sizing: border-box;
+}
+
+.package-header:first-child {
+  border-right: 1px solid #DDD;
+}
+
+.orderInfo {
+  width: 100%;
+  padding: 1.4rem 4%;
+  box-sizing: border-box;
+  font-size: 0;
+}
+
+.goods-img {
+  width: 25%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.g-img {
+  width: 5rem;
+  height: 5rem;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.order-status {
+  display: inline-block;
+  margin-top: -.5rem;
+  width: 75%;
+  vertical-align: top;
+  line-height: 2rem;
+  font-size: 1.2rem;
+}
+
+.status-info {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #151515;
+}
+
+.order-info {
+  margin: 0;
+  color: #999999;
+}
+
+.logisticsInfo {
+  width: 100%;
+  box-sizing: border-box;
+  border-top: .4rem solid #ddd;
+}
+
+.logistics-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  padding-top: 3%;
+}
+
+.logistics-status {
+  border-left: 1px solid #ddd;
+  width: 88%;
+  margin: 0 auto;
+  padding-left: 4%;
+  padding-bottom: 3%;
+  position: relative;
+}
+
+.point {
+  width: 1rem;
+  height: 1rem;
+  background: #ddd;
+  border-radius: 50%;
+  position: absolute;
+  top: 1%;
+  left: -1.4%;
+}
+
+.log-info {
+  color: #666;
+  margin-top: 0;
+}
+.logistics-status:first-child .point {
+  background: #333;
+  box-shadow: 0 2px 4px 0 #333333;
+}
+.logistics-status:first-child .log-info{
+  color: #333;
+}
+.log-time {
+  color: #3F3F3F;
+  margin-top: -.8rem;
+}

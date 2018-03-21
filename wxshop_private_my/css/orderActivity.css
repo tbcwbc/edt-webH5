@@ -1,0 +1,255 @@
+body {
+  background: #F4F4F4;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 438px;
+}
+
+.order-list {
+  position: absolute;
+  top: 84px;
+  bottom: 5rem;
+  width: 100%;
+  overflow: hidden;
+}
+.order-list .top-tip {
+  position: absolute;
+  top: -4rem;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  color: #555;
+}
+.list-content{
+  overflow: hidden;
+}
+.order-list .bottom-tip{
+  width: 100%;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    text-align: center;
+    color: #777;
+    background: #f2f2f2;
+}
+.all-order-title {
+  height: 40px;
+  width: 100%;
+  background: #fff;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-top: 10px;
+  margin-bottom: 4px;
+  font-size: 1.3rem;
+}
+
+.allOrder-img {
+  width: 18px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.order-title {
+  margin-left: 1%;
+}
+
+
+/* 导航 */
+
+.order-nav {
+  background: #fff;
+  height: 40px;
+  width: 100%;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.nav-ul {
+  width: 100%;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.3rem;
+}
+
+.nav-li {
+  position: relative;
+  width: 20%;
+  text-align: center;
+  line-height: 40px;
+  height: 40px;
+  float: left;
+}
+
+.nav-li.active:after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 2rem;
+  height: 0;
+  border-top: .3rem solid #333;
+}
+
+
+/* 下单时间 */
+
+.order-time {
+  height: 74px;
+  font-family: PingFangSC-Regular;
+  color: #333333;
+  line-height: 32px;
+  padding-top: 4px;
+  padding-left: 15px;
+}
+
+.or-time {
+  margin: 0;
+}
+
+.or-time1 {
+  color: #F05050;
+}
+
+.time {
+  margin-left: 5px;
+}
+
+
+/* 商品信息 */
+.product-wrapper{
+  position: relative;
+}
+.product-wrapper .action{
+  position: absolute;
+  right: 4%;
+  bottom: .5rem;
+}
+.product-wrapper .action span,.product-wrapper .action a{
+    display: inline-block;
+    padding: .2rem .8rem;
+    margin-left: .3rem;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    color: #333;
+}
+.product {
+  border-top: 1px solid #FFF;
+}
+
+.product-ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.product-li {
+  height: 100px;
+  border-top: 1px solid #FFF;
+  background-color: #F4F4F4;
+}
+
+.product-img {
+  width: 27.8%;
+  height: 100px;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 10px;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.product-dl-img {
+  width: 80px;
+  height: 80px;
+}
+
+.product-dd {
+  display: inline-block;
+  width: 72%;
+  height: 100px;
+}
+
+.product-info {
+  margin-top: 6%;
+  width: 49%;
+  display: inline-block;
+  
+}
+
+.price-count {
+  display: inline-block;
+  margin-top: 6%;
+  margin-right: 4%;
+}
+
+.sku {
+  color: #3F3F3F;
+}
+
+.product-p {
+  font-family: PingFangSC-Regular;
+  color: #333333;
+  line-height: 17px;
+  margin: 3px;
+}
+
+.price {
+  color: #E64340;
+}
+
+.num {
+  color: #AAAAAA;
+}
+
+.product-li:first-child {
+  border-top: none;
+}
+
+
+/* 价格 */
+
+.allPrice {
+  height: 40px;
+  width: 100%;
+  font-family: PingFangSC-Regular;
+  color: #333333;
+  padding-top: 3%;
+  box-sizing: border-box;
+  padding-right: 4%;
+  background: #fff;
+}
+
+.all-price {
+  margin: 0px;
+}
+
+.yhPrice {
+  font-size: 1.4rem;
+  color: #F05151;
+}
+
+/*全部订单页面*/
+.all-order-list-wrapper .order-list{
+  top: 44px;
+}

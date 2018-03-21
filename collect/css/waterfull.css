@@ -1,0 +1,72 @@
+.waterfall {
+    clear: both;
+    width: 100%;
+    margin: 10px auto;
+    position: relative;
+}
+.waterfall:after, .waterfall:before {
+    content: " ";
+    display: table;
+}
+.flow {
+    width: 40%;
+    position: absolute;
+    border: 1px solid #ccc;
+    box-shadow: #cccccc 2px 3px 3px;
+    transition: left .5s linear;
+    -webkit-transition: left .5s linear;
+    -moz-transition: left .5s linear;
+    -o-transition: left .5s linear;
+}
+
+.flowItem{
+   background-size: 100% 100%;
+   background-repeat: no-repeat;
+   padding-top: 8%;
+}
+
+
+
+.girl-number{
+    background-image: url(../images/number-background@3x.png);
+    background-size: 100% 100%;
+    width: 60%;
+    height: 1.6em;
+}
+
+.girl-number span{
+    color: white;
+    font-size:  15px;
+    margin: auto 0.5em;
+}
+
+.girl-des{
+    display: inline-block;
+    font-size: 12px;
+    height: 3em;
+    padding-top:  2%;
+    padding-left: 5%;
+    padding-bottom: 2%;
+    background-color: white;
+}
+
+.girl-name{
+    color: #c4c4c4;
+}
+
+.girl-votes{
+    display: inline-block;
+    color: #c4c4c4;
+
+}
+
+.votes-btn{
+    background-image: url(../images/votes@3x.png);
+    background-size: 100% 100%;
+    float: right;
+    margin-right: 10px;
+    margin-top: -40px;
+    width: 60px;
+    height: 60px;
+
+}

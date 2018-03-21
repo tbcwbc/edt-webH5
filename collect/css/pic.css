@@ -1,0 +1,16 @@
+
+*{padding: 0;margin: 0}
+h1{text-align: center}
+body{background-color: #eeeeee}
+.container{  width: 960px; height: 450px;  margin: auto; position: relative}
+img{padding: 10px 10px 15px;background-color: white; border: 1px solid #dddddd; position: absolute; width: 200px; height: auto;z-index: 1}
+img:hover{transform: rotate(0deg) scale(1.2,1.2); box-shadow: 10px 10px 15px #ccc;z-index: 2}
+img{transition: all 1s}
+.class1{
+    left: 200px;
+    top: 50px;
+    transform: rotate(20deg);
+}
+.class2{
+    left: 270px;top: 80px; transform: rotate(-5deg);
+}

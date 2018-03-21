@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>下单</title>
+    <link rel="stylesheet" href="../css/weui.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/until.css">
+    <link rel="stylesheet" href="../css/orderCommit.css">
+    <link rel="stylesheet" href="../css/remind.css">
+    
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <div class="pb-4rem">
+          <!--收货信息-->
+          <div class="receiving">
+            <!--<img class="rec-img" src="../images/address01.png">-->
+            <div class="address-info editAddress-hook">
+              <p class="p1">
+                <span class="text">收货人：</span>
+                <span class="name" id="buyerName"></span>
+                <span class="phone" id="buyerPhone"></span>
+              </p>
+              <p class="p2 ">
+                <span class="text">收货地址：</span>
+                <span class="address" id="address"></span>
+                <i class="hock-next"><span class="next"></span></i>
+              </p>
+            </div>
+
+          </div>
+          <!--商品信息-->
+          <ul class="goods goods-hook">
+            <!--<li class="good-item">
+              <div class="good-img"><img src="../images/prcoduct.png"></div>
+              <div class="good-info">
+                <div class="text">
+                  <p class="name">麦卡伦1824大师系列晖钻</p>
+                  <p class="desc">单一麦芽威士忌</p>
+                  <span class="sku">sku</span>
+                </div>
+                <div class="good-price">
+                  <span class="price">￥12,800</span>
+                  <span class="count">x1</span>
+                </div>
+              </div>
+            </li>-->
+          </ul>
+          <!--合计-->
+          <div class="total border-bottom-1px">
+            <i>共<span id="counts">4</span>件商品</i>
+            <i>合计：<span class="discounts">￥<span class="discounts priceSum"></span></span></i>
+          </div>
+          <section class="remark border-bottom-1px">
+            备注：<input type="text" class="desc" id="remark" placeholder="选填" />
+          </section>
+          <section class="invoice has-remark border-bottom-1px">
+            <div class="header border-bottom-1px">是否需要发票
+              <input type="checkbox" name="invoice" class="input-none" />
+              <i class="is-check"></i>
+            </div>
+            <ul class="info invoice-info-hook hide">
+              <li><span class="title">发票抬头：</span><span id="companyName"></span></li>
+              <li class="hide"><span class="title">公司税务号：</span><span id="taxNumber"></span></li>
+              <!--<li class="hide"><span class="title">银行账号：</span><span id="bankAccount"></span></li>
+              <li class="hide"><span class="title">公司联系方式：</span><span id="companyPhone"></span></li>-->
+              <i class="edit hock-edit">修改</i>
+            </ul>
+          </section>
+        </div>
+      </div>
+      <button class="btn-sub hock-submit">提交订单</button>
+    </div>
+    <!--订单列表循环-->
+    <script id="jsr" type="text/x-jsrender">
+      <li class="good-item">
+        <div class="good-img"><img src="{{:productImage}}"></div>
+        <div class="good-info">
+          <div class="text">
+            <p class="name">{{:productSimplifyName}}</p>
+            <!--<p class="name">麦卡伦1824大师系列晖钻</p>
+            <p class="desc">单一麦芽威士忌</p>-->
+            <span class="sku">{{:productSku}}</span>
+          </div>
+          <div class="good-price">
+            <span class="price">￥{{:~fmoney(productMemberPrice,true)}}</span>
+            <span class="count">x{{:counts}}</span>
+          </div>
+        </div>
+      </li>
+    </script>
+  </body>
+  <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="../js/wechat_auth.js"></script>
+  <script type="text/javascript" src="../js/app/config.js"></script>
+  <script type="text/javascript" src="../js/until.js"></script>
+  <script type="text/javascript" src="../js/jsrender.min.js"></script>
+  <script type="text/javascript" src="../js/app/orderCommit.js"></script>
+
+</html>

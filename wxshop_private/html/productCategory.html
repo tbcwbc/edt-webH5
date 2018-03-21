@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>产品分类</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/until.css">
+    <link rel="stylesheet" href="../css/remind.css">
+    <link rel="stylesheet" href="../css/productCategory.css">
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!--菜单列表-->
+      <div class="menu-wrapper">
+        <ul id="categoryOne">
+          <li class='tab border-bottom-1px check' id="all">全部产品</li>
+        </ul>
+      </div>
+      <!--系列列表-->
+      <div class="classification-wrapper">
+      	<ul class="classification-hook">
+       </ul>
+      </div>
+    </div>
+    <script id="jsr2" type="text/x-jsrender">
+      <li>
+        <h3 class="title">{{:categoryName}}</h3>
+        <span class="all" onclick="app.gotoGoodList({{:id}})">全部</span>
+        <ul class="classifications">
+          {{if goodsList != null && goodsList.length >0}}{{for goodsList}}
+          <li onclick="app.gotoGoodDetails({{:id}})">{{:productSimplifyName}}</li>
+          {{/for}}{{/if}}
+        </ul>
+      </li>
+    </script>
+  </body>
+  <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="../js/wechat_auth.js"></script>
+  <script type="text/javascript" src="../js/app/config.js"></script>
+  <script type="text/javascript" src="../js/until.js"></script>
+  <script type="text/javascript" src="../js/jsrender.min.js"></script>
+  <script type="text/javascript" src="../js/bscroll.min.js"></script>
+  <script type="text/javascript" src="../js/app/productCategory.js"></script>
+
+</html>

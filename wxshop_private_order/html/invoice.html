@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>发票信息</title>
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="../css/until.css">
+	<link rel="stylesheet" href="../css/invoice.css">
+	<link rel="stylesheet" href="../css/weui.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="content-wrapper">
+			<!-- <ul  class="invoice-info border-bottom-1px company">
+				
+				<li class="item">
+					<em class="title">抬头:</em>
+					<span class="text">上海新信网络科技有限公司</span>
+					<span class="type">公司发票</span>
+				</li>
+				<li class="item">
+					<em class="title">联系电话:</em>
+					<span class="text">021-5819021</span>
+				</li>
+				<li class="item">
+					<em class="title">税号:</em>
+					<span class="text">761565688</span>
+				</li>
+				<li class="item">
+					<em class="title">开户行:</em>
+					<span class="text">中国银行</span>
+				</li>
+				<li class="item">
+					<em class="title">账号:</em>
+					<span class="text">611485464995633</span>
+				</li>
+				<li class="timg">
+					<img src="../images/timg.png" />
+				</li>
+				<p class="default ">默认</p>
+		
+			</ul>
+			<ul class="invoice-info border-bottom-1px person">
+					<section class="invoice-info person">
+							<div class="item">
+								<em class="title">抬头:</em>
+								<span class="text">艾安琪</span>
+								<span class="type">个人发票</span>
+							</div>
+							<div class="setDefault">
+								<label>
+									<input type="checkbox" name="default" class="input-none" />
+									<i class="is-check"></i>
+									设为默认
+								</label>
+							</div>
+						</section>
+						<section class="invoice-info person">
+								<div class="item">
+									<em class="title">抬头:</em>
+									<span class="text">艾安琪</span>
+									<span class="type">个人发票</span>
+								</div>
+								<div class="setDefault">
+									<label>
+										<input type="checkbox" name="default" class="input-none" />
+										<i class="is-check"></i>
+										设为默认
+									</label>
+								</div>
+			</ul> -->
+		
+		</div>
+	</div>
+	<div class="btn" id="addInvoice">添加新发票</div>
+
+	<div id="loadingToast" style="display:none">
+        <div class="weui-mask_transparent"></div>
+        <div class="weui-toast">
+            <i class="weui-loading weui-icon_toast"></i>
+            <p class="weui-toast__content">数据加载中...</p>
+        </div>
+    </div>
+
+    <div class="js_dialog" id="Dialog" style="display: none;">
+        <div class="weui-mask"></div>
+        <div class="weui-dialog">
+            <div class="weui-dialog__hd"><strong class="weui-dialog__title">提示</strong></div>
+            <div class="weui-dialog__bd"> <span id="msg">是否删除该发票?</span></div>
+            <div class="weui-dialog__ft">
+                <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_default" id="no">否</a>
+                <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary" id="ok">是</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../js/wechat_auth.js"></script>
+<script type="text/javascript" src="../js/app/config.js"></script>
+<script type="text/javascript" src="../js/until.js"></script>
+<script type="text/javascript" src="../js/app/invoice.js"></script>
+<script>
+	$(function () {
+		$("#addInvoice").on('click', function () {
+			window.location.href = "addInvoice.html?cId=" + cId;
+		})
+	})
+</script>
+
+</html>

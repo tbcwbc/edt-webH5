@@ -1,0 +1,793 @@
+* {
+    font-family: Hiragino Sans GB, Microsoft YaHei, Arial, Helvetica, sans-serif
+}
+
+body {
+
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+div img {
+    width: 100%;
+    height: auto;
+}
+
+.main {
+    position: absolute;
+    height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+
+/*显示并放大*/
+.show-animate {
+    animation: show1 1s forwards;
+}
+
+@-webkit-keyframes show1 {
+    0% {
+        transform: scale(0.3, 0.3);
+        opacity: 0
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1, 1)
+    }
+}
+
+/*.birth-day {*/
+    /*margin-top: 20%;*/
+/*}*/
+
+/*.gift-des {*/
+    /*margin-top: 10%;*/
+
+/*}*/
+
+/*.address-mess {*/
+    /*margin-top: 15%;*/
+    /*width: 40%;*/
+    /*margin-left: 30%;*/
+/*}*/
+
+/*.add-mess {*/
+    /*margin-left: 0 !important;*/
+    /*text-align: center;*/
+    /*font-size: 0.6em;*/
+/*}*/
+
+
+/*收货页面*/
+.members-address {
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    height: 70%;
+    z-index: 2;
+}
+/*收货地址页面提交信息*/
+.submitAddress {
+    position: absolute;
+    left: 15%;
+    top: 75%;
+    width: 30%;
+    opacity: 0;
+    -webkit-animation: flyout 1s forwards 1s;
+}
+/*收货地址查看礼品*/
+.look-gift {
+    position: absolute;
+    top: 75%;
+    right: 15%;
+    width: 30%;
+    opacity: 0;
+    -webkit-animation: flyout 1s forwards 1s;
+}
+
+@-webkit-keyframes flyout {
+  0%{opacity: 0; transform: translate(0,30%)}
+    100%{opacity: 1; transform: translate(0,0)}
+}
+
+/*地址选择弹出遮罩*/
+.shade {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #0f0f0f;
+    opacity: 0.3;
+    z-index: 50;
+}
+
+/*选择地址弹框*/
+.city-alert {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    height: 75%;
+    background-color: white;
+    font-size: 1.2em;
+    opacity: 1;
+    z-index: 51;
+}
+
+/*选择的省市*/
+.select-address {
+    position: relative;
+    float: left;
+    width: 100%;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    color: #f96667;
+}
+
+.select-pro, .select-city {
+    position: relative;
+    padding: 2% 4%;
+    float: left;
+    border-right: 1px  solid #dddddd;
+}
+/*消失按钮*/
+.dismiss{
+    float: right;
+    margin-right: 0;
+    padding: 2% 4%;
+}
+
+/*省列表*/
+.pro-list {
+    float: left;
+    width: 40%;
+    height: 100%;
+    overflow: scroll;
+}
+.pro {
+    width: 100%;
+    background-color: rgb(214, 214, 214);
+    -webkit-padding-start: 0;
+    -webkit-margin-before: 0;
+}
+
+.pro li {
+    text-align: center;
+    height: 3em;
+    line-height: 3em;
+}
+
+.select-li {
+    background-color: white;
+}
+/*市列表*/
+.city-list {
+    width: 60%;
+    height: 100%;
+    overflow: scroll;
+}
+
+.city {
+    float: right;
+    width: 95%;
+    -webkit-padding-start: 0;
+    -webkit-margin-before: 0;
+}
+
+.city li {
+    text-align: center;
+    height: 3em;
+    line-height: 3em;
+    border-bottom: 1px solid #dddddd;
+}
+
+/*顶部花模块*/
+.background-img {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+/*logo*/
+.logo {
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    width: 50%;
+    opacity: 0;
+    -webkit-animation: show1 1s forwards 1s;
+}
+/*问候语*/
+.explain {
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    top: 55%;
+}
+
+/*.wish {*/
+    /*margin-top: 20%;*/
+    /*text-align: center;*/
+    /*font-size: 1.2em;*/
+    /*line-height: 1.7em;*/
+/*}*/
+
+/*.border {*/
+    /*position: relative;*/
+    /*margin-top: 15%;*/
+    /*margin-left: 10%;*/
+    /*margin-right: 10%;*/
+/*}*/
+
+/*.gift-title {*/
+    /*margin-top: 10%;*/
+    /*text-align: center;*/
+    /*font-size: 1.5em;*/
+    /*line-height: 1.7em;*/
+/*}*/
+
+/*.gift-name {*/
+    /*position: absolute;*/
+    /*top: 15%;*/
+    /*left: 0;*/
+    /*width: 60%;*/
+    /*text-align: center;*/
+    /*font-size: 1.1em;*/
+/*}*/
+
+/*.gift-detalis {*/
+    /*position: absolute;*/
+    /*top: 30%;*/
+    /*left: 0;*/
+    /*width: 60%;*/
+    /*text-align: center;*/
+/*}*/
+
+/*.text1 {*/
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*width: 60%;*/
+/*}*/
+
+/*.aa {*/
+    /*position: absolute;*/
+    /*left: 30%;*/
+    /*width: 40%;*/
+/*}*/
+
+
+/*首页边框*/
+.main-border {
+    position: absolute;
+    border: 2px solid rgb(241, 121, 121);
+    top: 5%;
+    left: 5%;
+    bottom: 3%;
+    right: 5%;
+    z-index: 0;
+    opacity: 0;
+    -webkit-animation: show 1s forwards 0.5s;
+}
+
+.main-border-none{
+    position: absolute;
+    border: 2px solid rgb(241, 121, 121);
+    top: 5%;
+    left: 5%;
+    bottom: 3%;
+    right: 5%;
+    z-index: 0;
+}
+
+/*显示动画*/
+@-webkit-keyframes show {
+    0%{opacity: 0}
+    100%{opacity: 1}
+}
+
+/*第一朵花*/
+.flower1{
+    position: absolute;
+    top: 0;
+    width: 46%;
+    left: 27%;
+    z-index: 12;
+    opacity: 0;
+    -webkit-animation: show 0.5s forwards 1.5s;
+}
+
+.flower1-1{
+    position: absolute;
+    top: 0;
+    width: 46%;
+    left: 27%;
+    z-index: 11;
+    opacity: 0;
+    -webkit-animation: show1 1s forwards 1.5s;
+}
+.flower1-2{
+    position: absolute;
+    top: 0;
+    width: 46%;
+    left: 27%;
+    z-index: 10;
+    opacity: 0;
+    -webkit-animation: show1 1s forwards 1.7s;
+}
+
+.flower1-2-none{
+    position: absolute;
+    top: 0;
+    width: 46%;
+    left: 27%;
+    z-index: 10;
+}
+
+
+/*左边的花*/
+.flower2{
+    position: absolute;
+    top: 0;
+    width: 32%;
+    left: 0;
+    transform-origin: 100% 50%;
+    transform: scale(1,1);
+    opacity: 0;
+    z-index: 0;
+    -webkit-animation: left-totate 1s forwards 2s;
+}
+
+.flower2-none{
+    position: absolute;
+    top: 0;
+    width: 32%;
+    left: 0;
+    z-index: 0;
+}
+
+@-webkit-keyframes left-totate {
+    0%{transform: rotate(90deg) scale(0.3,0.3);opacity: 0}
+    100%{transform: rotate(0deg) scale(1,1);opacity: 1}
+}
+
+/*右边的花*/
+.flower3{
+    position: absolute;
+    top: 0;
+    width: 40%;
+    right: 0;
+    opacity: 0;
+    z-index: 9;
+    transform-origin: 0% 50%;
+    -webkit-animation: right-totate 1s forwards 2s;
+}
+
+.flower3-none{
+    position: absolute;
+    top: 0;
+    width: 40%;
+    right: 0;
+    z-index: 9;
+}
+
+.flower3-1 {
+    position: absolute;
+    top: 0%;
+    width: 40%;
+    right: 0;
+    z-index: 8;
+    opacity: 0;
+    -webkit-animation: up-move 0.7s forwards 2.7s;
+}
+.flower3-1-none{
+    position: absolute;
+    top: 0%;
+    width: 40%;
+    right: 0;
+    z-index: 8;
+
+}
+
+.flower3-2 {
+    position: absolute;
+    top: 0%;
+    width: 40%;
+    right: 0;
+    z-index: 7;
+    opacity: 0;
+    -webkit-animation: right-totate 1s forwards 2s;
+}
+
+.flower3-2-none{
+    position: absolute;
+    top: 0%;
+    width: 40%;
+    right: 0;
+    z-index: 7;
+
+}
+@-webkit-keyframes up-move {
+    0%{transform: translate(0, -50px);opacity: 0}
+    100%{transform: translate(0,0);opacity: 1}
+}
+
+@-webkit-keyframes right-totate {
+    0%{transform: rotate(-90deg) ;opacity: 0}
+    100%{transform: rotate(0deg);opacity: 1}
+}
+
+.flower4{
+    position: absolute;
+    top: 22%;
+    width: 55%;
+    left: 24%;
+    z-index: 6;
+    opacity: 0;
+    transform-origin: 50% 0;
+    -webkit-animation: show1 0.4s forwards 3.2s;
+}
+
+.flower4-none{
+    position: absolute;
+    top: 22%;
+    width: 55%;
+    left: 24%;
+    z-index: 6;
+
+}
+
+
+.flower4-1{
+    position: absolute;
+    top: 22%;
+    width: 55%;
+    left: 25%;
+    z-index: 5;
+    opacity: 0;
+    -webkit-animation: up-move 0.4s forwards 3.4s;
+}
+
+.flower4-1-none{
+    position: absolute;
+    top: 22%;
+    width: 55%;
+    left: 25%;
+    z-index: 5;
+
+}
+
+.flower4-2{
+    position: absolute;
+    top: 22%;
+    width: 55%;
+    left: 25%;
+    z-index: 4;
+    opacity: 0;
+    -webkit-animation: up-move 0.4s forwards 3.6s;
+}
+
+
+.flower4-2-none{
+    position: absolute;
+    top: 22%;
+    width: 55%;
+    left: 25%;
+    z-index: 4;
+
+}
+.flower4-3{
+    position: absolute;
+    top: 22%;
+    width: 55%;
+    left: 24%;
+    z-index: 3;
+    opacity: 0;
+    -webkit-animation: up-move 0.4s forwards 3.8s;
+}
+
+.flower4-3-none{
+    position: absolute;
+    top: 22%;
+    width: 55%;
+    left: 24%;
+    z-index: 3;
+
+}
+
+.flower4-4{
+    position: absolute;
+    top: 22%;
+    width: 55%;
+    left: 25%;
+    z-index: 2;
+    opacity: 0;
+    -webkit-animation: up-move 0.4s forwards 4.0s;
+}
+
+.flower4-4-none{
+    position: absolute;
+    top: 22%;
+    width: 55%;
+    left: 25%;
+    z-index: 2;
+
+}
+
+.flower4-5{
+    position: absolute;
+    top: 15%;
+    width: 70%;
+    left: 14%;
+    z-index: 1;
+    opacity: 0;
+    -webkit-animation: up-move 0.6s forwards 4.2s;
+}
+
+.flower4-5-none{
+    position: absolute;
+    top: 15%;
+    width: 70%;
+    left: 14%;
+    z-index: 1;
+}
+
+.animate-hide{
+    -webkit-animation: hide 0.5s forwards;
+}
+@-webkit-keyframes hide {
+    0%{opacity: 1}
+    100%{opacity: 0}
+}
+
+
+.member-name, .member-phone, .member-city, .member-details-address{
+    position: absolute;
+    left: 15%;
+    width: 70%;
+    font-size: 1.3em;
+    opacity: 0;
+}
+
+.member-name input, .member-phone input, .member-city input, .member-details-address input{
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: 65%;
+    border-bottom-color: red;
+    border-bottom-width: 0.5px;
+    border-left-width: 0px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+}
+
+
+.member-name{
+    top:20%;
+    -webkit-animation: fly 1s forwards 1s;
+}
+
+.member-phone{
+    top:32%;
+    -webkit-animation: fly 1s forwards 1.2s;
+}
+
+.member-city{
+    top:44%;
+    -webkit-animation: fly 1s forwards 1.4s;
+}
+
+.member-details-address{
+    top:56%;
+    -webkit-animation: fly 1s forwards 1.6s;
+}
+
+
+@-webkit-keyframes fly {
+    0%{opacity: 0; transform: translate(100%,0)}
+    100%{opacity: 1;  transform: translate(0,0)}
+}
+
+ /*背景图*/
+.rose-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.rose-back img{
+    width: 100%;
+    height: 100%;
+}
+
+/*主要内容*/
+.rose-content{
+    position: absolute;
+    left: 4.6%;
+    top: 3.5%;
+    right: 4.6%;
+    bottom: 3.5%;
+    background-color: #faf5f8;
+}
+
+/*问候语*/
+.gold-greet{
+    position: absolute;
+    left: 12.5%;
+    right: 12.5%;
+    top: 8.6%;
+}
+
+/*产品区*/
+.rose-border{
+    position: absolute;
+    left: 3.6%;
+    right: 3.6%;
+    top: 43.1%;
+    height: 47.8%;
+    background-color: white;
+    border: 1px solid #f58984;
+}
+/*玫瑰描述*/
+.rose-des{
+    position: absolute;
+    left: 11.7%;
+    top: 49.1%;
+    width: 44.8%;
+}
+
+/*收货地址*/
+.rose-take{
+    position: absolute;
+    left: 16.9%;
+    width: 34.5%;
+    top:69.8%;
+}
+
+.rose-logistics{
+    position: absolute;
+    left: 16.9%;
+    width: 34.5%;
+    top:78.8%;
+}
+
+/*金卡礼盒*/
+.rose-box{
+    position: absolute;
+    left: 58.8%;
+    top:37%;
+    width: 37.5%;
+    height: 48.8%;
+
+}
+
+.rose-box img{
+    width: 100%;
+    height: 100%;
+}
+
+.regular-card{
+    position: absolute;
+    top: 37.9%;
+    left: 12.5%;
+    right: 12.5%;
+
+}
+
+.regular-logistics{
+    position: absolute;
+    top: 73.2%;
+    width: 36%;
+    left: 32%;
+}
+
+.regular-take{
+    position: absolute;
+    top: 83.6%;
+    width: 36%;
+    left: 32%;
+}
+
+.chocolate-border{
+    position: absolute;
+    left: 3.6%;
+    right: 3.6%;
+    top: 35.3%;
+    height: 53%;
+    background-color: white;
+    border: 1px solid #f58984;
+}
+
+
+/*巧克力*/
+.chocolate-gift{
+    position: absolute;
+    top:38.8%;
+    left: 12.5%;
+    right: 12.5%;
+}
+
+.chocolate-des{
+    position: absolute;
+    top:66.4%;
+    left: 12.5%;
+    right: 12.5%;
+}
+
+.chocolate-take{
+    position: absolute;
+    top:92%;
+    left: 3.6%;
+    width: 32%;
+}
+
+.chocolate-logistics{
+    position: absolute;
+    top:92%;
+    right: 3.6%;
+    width: 32%;
+}
+
+
+.notify{
+    position: absolute;
+    top: 44.8%;
+    text-align: center;
+    width: 100%;
+    font-size: 1.3em;
+    color: #3f0f0f;
+}
+
+
+.notify-take{
+    position: absolute;
+    top: 73%;
+    width: 36%;
+    left: 32%;
+}
+
+.notify-back{
+    position: absolute;
+    top: 82%;
+    width: 36%;
+    left: 32%;
+}
+
+.alert-back{
+    background-color: black;
+    opacity: 0.3;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.alert-content{
+    position: absolute;
+    background-color: white;
+    top: 15%;
+    left: 10%;
+    right: 10%;
+    bottom: 15%;
+    z-index: 1001;
+    overflow: scroll;
+    padding-left: 10%;
+    padding-top: 30px;
+
+}
+
+.alert-dismiss{
+    position: absolute;
+    top: 0;
+    width: 95%;
+    left: 0;
+    text-align: right;
+    font-size: 1.3em;
+
+}

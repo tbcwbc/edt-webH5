@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/weui.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/until.css">
+    <link rel="stylesheet" href="../css/goodDetails.css">
+    <link rel="stylesheet" href="../css/remind.css">
+    
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="swiper-container header">
+        <div class="swiper-wrapper swiper-wrapper-hook">
+        </div>
+        <!--分页器-->
+        <div class="swiper-pagination"></div>
+      </header>
+      <section class="content-wrapper">
+        <div class="good">
+          <h2 class="name" id="name">名称</h2>
+          <p>零售价：
+            <span class="price" id="price">￥0.00</span>
+            <span class="stock">(<span id="stock">0</span>件库存)</span>
+          </p>
+        </div>
+        <div class="detail">
+          <h3 class="title">商品信息</h3>
+          <div class="productDetail">
+
+          </div>
+        </div>
+      </section>
+      <footer class="footer-wrapper">
+      	<div class="home home-hook">
+          <!--<img class="home-img" src="../images/home.png" alt="" />-->
+          <span class="title">店铺</span>
+        </div>
+        <div class="cart cart-hook">
+          <!--<img class="cart-img" src="../images/cart01.png" alt="" />-->
+          <span class="title">购物车</span>
+          <i class="count hide" id="shopCartCounts"></i>
+        </div>
+        <div class="pay pay-hook">立即购买</div>
+        <div class="add add-hook">加入购物车</div>
+      </footer>
+    </div>
+  </body>
+  <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+  <script type="text/javascript" src="../js/wechat_auth.js"></script>
+  <script type="text/javascript" src="../js/app/config.js"></script>
+  <script type="text/javascript" src="../js/until.js"></script>
+  <script type="text/javascript" src="../js/swiper.min.js"></script>
+  <script type="text/javascript" src="../js/app/goodDetails.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  </script>
+
+</html>

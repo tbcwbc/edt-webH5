@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>订单信息</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/until.css">
+    <link rel="stylesheet" href="../css/orderCommit.css">
+    <link rel="stylesheet" href="../css/remind.css">
+  </head>
+
+  <body>
+    <div class="wrapper order-info-wrapper">
+      <div class="content">
+        <div class="pb-4rem">
+        	<!-- 物流信息 -->
+        	<div class="logistics border-bottom-1px hide logistics-hook">
+        		<div class="logistics-fl">
+        			<div class="logistics-img">
+        			<img src="../images/prcoduct.png" />
+        		</div>
+        		</div>
+        		<div class="logistics-info">
+        			<p class="col-6">物流公司<span class="col-9 ml-1rem logistics-company-hook"></span></p>
+        			<p class="col-9 logistics-info-text logistics-num-hook">由【上海浦东中转站】发往【上海浦东公司】</p>
+        		</div>
+        		<div class="logistics-status">运输中</div>
+        	</div>
+          <!--收货信息-->
+          <div class="receiving border border-bottom-1px">
+            <!--<img class="rec-img" src="../images/address01.png">-->
+            <div class="address-info">
+              <p class="p1">
+                <span class="text">收货人：</span>
+                <span class="name" id="receivingName"></span>
+                <span class="phone" id="receivingPhone"></span>
+              </p>
+              <p class="p2 hock-editAddress">
+                <span class="text">收货地址：</span>
+                <span class="address" id="address"></span>
+                <i class="hock-next"><span class="next"></span></i>
+              </p>
+            </div>
+          </div>
+          <!--下单客户信息-->
+          <ul class="buyer-info border-bottom-1px">
+          	<li>下单客户：<span class="buyer-name"></span></li>
+          	<li>订单号：<span class="buyer-orderId"></span></li>
+          	<li>手机号：<span class="buyer-phone"></span></li>
+          </ul>
+          <!--商品信息-->
+          <ul class="goods goods-hook">
+          </ul>
+          
+          <!--合计-->
+          <div class="total border-bottom-1px">
+            <i>共<span id="counts"></span>件商品</i>
+            <i>合计：<span class="discounts">￥<span class="discounts priceSum"></span></span></i>
+          </div>
+          <section class="remark border-bottom-1px">
+            备注：<span type="text" class="desc" id="remark"></span>
+          </section>
+          <section class="invoice has-remark border-bottom-1px hide">
+            <ul class="info invoice-info-hook">
+              <li><span class="title">发票抬头：</span><span id="companyName"></span></li>
+              <li class="hide"><span class="title">公司税务号：</span><span id="taxNumber"></span></li>
+              <!--<li class="hide"><span class="title">银行账号：</span><span id="bankAccount"></span></li>
+              <li class="hide"><span class="title">公司联系方式：</span><span id="companyPhone"></span></li>-->
+            </ul>
+          </section>
+        </div>
+      </div>
+      <div class="btn-sub submit-hook hide"></div>
+    </div>
+    <!--订单列表循环-->
+    <script id="jsr" type="text/x-jsrender">
+      <li class="good-item">
+        <div class="good-img"><img src="{{:productImage}}"></div>
+        <div class="good-info">
+          <div class="text">
+          	{{if productSimplifyName != null}}
+            <p class="name">{{:productSimplifyName}}</p>
+            {{else}}
+            <p class="name">{{:productName}}</p>
+            {{/if}}
+            <!--<p class="name">麦卡伦1824大师系列晖钻</p>
+            <p class="desc">单一麦芽威士忌</p>-->
+            <span class="sku">{{:sku}}</span>
+          </div>
+          <div class="good-price">
+            <span class="price">￥{{:~fmoney(productPrice,true)}}</span>
+            <span class="count">x{{:productNum}}</span>
+          </div>
+        </div>
+      </li>
+    </script>
+  </body>
+  <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="../js/wechat_auth.js"></script>
+  <script type="text/javascript" src="../js/app/config.js"></script>
+  <script type="text/javascript" src="../js/until.js"></script>
+  <script type="text/javascript" src="../js/jsrender.min.js"></script>
+  <script type="text/javascript" src="../js/app/orderInfo.js"></script>
+
+</html>

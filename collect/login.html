@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>麦卡伦</title>
+    <link rel="stylesheet" type="text/css" href="css/pays.css">
+    <link rel="stylesheet" type="text/css" href="css/weui.css">
+    <script type="text/javascript" src="./js/jquery-2.2.3.min.js"></script>
+    <script type="application/javascript" src="./js/fastclick.js"></script>
+    <script type="application/javascript">
+        $(function () {
+            FastClick.attach(document.body);
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="content">
+        <div class="bind_logo">
+            <img src="image/logo.png" />
+        </div>
+        <div class="span">
+            <img src="image/prompt.png" />
+        </div>
+        <div class="form">
+            <div class="form-content">    
+                <div class="title">姓 氏</div>
+                <span class="line">1</span>
+                <input class="form-input" id="firstName" placeholder="请填写姓(必填)">
+                <div style="clear:both"></div>
+            </div>
+            <div class="form-content">
+                <div class="title">名 字</div>
+                <span class="line">1</span>
+                <input class="form-input" id="lastName" placeholder="请填写名(必填)">
+                <div style="clear:both"></div>
+            </div>
+
+            <div class="form-content">
+                <div class="title">手 机</div>
+                <span class="line">1</span> 
+                <input class="form-input width" id="tel" placeholder="请输入手机号码(必填)">
+                <input class="qh-input" id="area" placeholder="区号">
+                <span class="jh">+</span>
+                <div style="clear:both"></div>
+            </div>
+            <!-- <div class="form-content">
+                
+                <span style="width:3rem;text-align:center;line-height:2.6rem" class="form-input">+86</span>
+                <input type="tel" style="left:11rem;width:50%" class="form-input" id="tel" placeholder="请输入手机号码(必填)">
+            </div> -->
+            <div class="form-content">
+                <div class="title">验证码</div>
+                <span class="line">1</span>
+                <input type="tel" class="form-input" id="code" placeholder="请输入验证码(必填)">
+                <button id="code" class="code-btn" onclick="getCode()">点击获取
+                    <br>验证码</button>
+                    <div style="clear:both"></div>
+            </div>
+        </div>
+
+        <div class="content_input9">
+            <div style="width:30%;display:flex; justify-content:center;align-items: center">
+                <span>称谓</span>
+            </div>
+
+            <div style="width:20%;display:flex;justify-content:space-between;align-items: center;margin-right:20px">
+                <input type="radio" value="1" class="x" name="b6" id="a6" style="display: none">
+                <label for="a6" class="a6 r">
+                    <img src="image/qq.png" alt="" class="r" style="position:absolute;top:-1.3rem;left:-1.3rem;display: none;width: 4rem;height: 4rem">
+                </label>
+                <span class="s1">先生</span>
+            </div>
+
+
+            <div style="width:20%;display:flex;justify-content:space-between;align-items: center;margin-right:40px">
+                <input type="radio" value="2" class="x" name="b6" id="b6" style="display: none">
+                <label for="b6" class="b6 r">
+                    <img src="image/qq.png" alt="" class="r" style="position:absolute;top:-1.3rem;left:-1.3rem;display: none;width: 4rem;height: 4rem">
+                </label>
+                <span class="s2">女士</span>
+            </div>
+
+        </div>
+
+        <div class="submit">
+            <img src="image/sub-btn.png" onclick="submit()" />
+        </div>
+
+        <div class="foot_submit">
+            <div class="zz">
+                <div class="d d1">
+                    <img src="image/z.png" id="age" alt="" class="r" style="position:absolute;top:-0.3rem;left:-0.1rem;width: 1.4rem;height: 1.4rem">
+                </div>
+                <span>确认您已年满二十一周岁</span>
+            </div>
+            <div class="zz">
+                <div class="d d2">
+                    <img src="image/z.png" id="agree" alt="" class="r" style="position:absolute;top:-0.3rem;left:-0.1rem;width: 1.4rem;height: 1.4rem">
+                </div>
+                <span style="margin-left:1.5rem">愿意接受麦卡伦品牌最新资讯</span>
+            </div>
+        </div>
+
+        <div class="footer">请理性饮酒</div>
+    </div>
+
+    <div class="js_dialog" id="Dialog" style="display: none;">
+        <div class="weui-mask"></div>
+        <div class="weui-dialog">
+            <div class="weui-dialog__hd">
+                <strong class="weui-dialog__title">提示</strong>
+            </div>
+            <div class="weui-dialog__bd">
+                <span id="msg"></span>
+            </div>
+            <div class="weui-dialog__ft">
+                <!-- <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_default" onclick="no()">不使用</a> -->
+                <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary" onclick="ok()">知道了</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="https://res.wx.qq.com/open/libs/weuijs/1.0.0/weui.min.js"></script>
+<script src="js/wechat_auth.js"></script>
+<script src="js/resetSize.js"></script>
+<script>
+    var wechat = new wechat();
+    var cId = wechat.get_url_param("cId");
+    var employeeId = wechat.get_url_param("eId");
+
+    var identity = wechat.get_url_param("identity");
+    var agree = true;
+    var achieveAge = true;
+    var InterValObj;
+    var curCount = 60;
+    var al = $("#Dialog");
+
+
+    (function ($) {
+        localStorage.clear();
+        wechat.init_auth(cId, function () {
+
+        });
+
+        $("#area").val('86');
+
+        $(".d1").on('click', function () {
+            $('#age').toggleClass('hide');
+            achieveAge = !achieveAge;
+        });
+        $(".d2").on('click', function () {
+            $('#agree').toggleClass('hide');
+            agree = !agree;
+        });
+
+    })(jQuery);
+
+    function submit() {
+        // var name = $("#name").val();
+        var firstName = $("#firstName").val();
+        var secondName = $("#lastName").val();
+        var tel = $("#tel").val();
+        var sex = $("input[name='b6']:checked").val();
+        var code = $("#code").val();
+        var globalRoaming = $("#area").val();
+
+        if (firstName && secondName && tel && sex && code) {
+            if (globalRoaming == 86) {
+                 if(tel.length != 11){
+                    $("#msg").html("请填写正确手机号"); alert.fadeIn();
+                 }
+                
+            }
+                if (achieveAge) {
+                    var data = {
+                        // username:name,
+                        firstName: firstName,
+                        secondName: secondName,
+                        globalRoaming: '+' + globalRoaming,
+                        tel: tel,
+                        gender: sex,
+                        achieveAge: achieveAge,
+                        agree: agree,
+                        code: code,
+                        employeeId: employeeId
+                    }
+
+                    $('#loadingToast').fadeIn();
+                    wechat.post_data("/api/member/front/create/member/" + cId, data, function (response) {
+                        console.log(response);
+                        $('#loadingToast').fadeOut();
+                        var code = response.code;
+                        if (code == 100005) {
+                            localStorage.clear();
+                            wechat.init_auth(cId);
+                        } else if (code == 100000) {
+                            window.location.href = "next.html";
+                        } else {
+                        
+                            $("#msg").html(response.msg);
+                           al.fadeIn();
+                            //                 window.location.href = "next.html";
+                        }
+
+                    });
+                } else {
+                    $("#msg").html("抱歉,您未达到法定饮酒年龄");
+                    alert.fadeIn();
+                }
+
+
+        } else if(!firstName) {
+            $("#msg").html("姓氏不能为空");
+            al.fadeIn();
+        }else if(!secondName){
+            $("#msg").html("名字不能为空");
+            al.fadeIn();           
+        }
+        else if(!globalRoaming){
+             $("#msg").html("区号不能为空"); 
+             al.fadeIn();
+        }else if(!tel){
+            $("#msg").html("请填写手机");
+            al.fadeIn();
+        }else if(!code){
+            $("#msg").html("验证码不能为空");
+            al.fadeIn();
+        }else if(!sex){
+            $("#msg").html("请选择性别");
+            al.fadeIn();
+        }
+
+
+
+
+    }
+
+    function ok(){
+        al.fadeOut();
+    }
+
+
+    function getCode() {
+
+
+         var phone = $("#tel").val();
+         var zones = $("#area").val();
+
+        if (!phone) {
+                alert("请填写手机号");
+                return;
+        }
+         if (zones == 86) {
+            if (phone.length != 11) {
+                alert("请填写正确手机号");
+                return;
+            }
+        }
+
+            $(".code-btn").attr("disabled", "true");
+            $(".code-btn").html(curCount + "秒后<br>可重发");
+            InterValObj = window.setInterval(SetRemainTime, 1000); //启动计时器，1秒执行一次
+            wechat.post_data("/api/member/front/sendVerificationCode", {
+                 tel: phone,
+                 zone: zones
+            }, function (response) {
+                //  $('#loadingToast').fadeOut();
+
+                if (response.code == 100000) {} else {
+
+                }
+            });
+        }
+    function SetRemainTime() {
+        if (curCount == 1) {
+            window.clearInterval(InterValObj); //停止计时器
+            $(".code-btn").removeAttr("disabled"); //启用按钮
+            $(".code-btn").html("获取<br>验证码");
+            curCount = 60;
+        } else {
+            curCount--;
+            $(".code-btn").html(curCount + "秒后<br>可重发");
+        }
+    }
+</script>

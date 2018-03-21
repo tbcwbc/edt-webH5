@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>订单中心</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/until.css">
+    <link rel="stylesheet" href="../css/orderActivity.css">
+    <link rel="stylesheet" href="../css/remind.css">
+  </head>
+
+  <body>
+    <div class="wrapper all-order-list-wrapper">
+      <div class="all-order-title">
+        <img src="../images/order01.png" alt="" class="allOrder-img">
+        <span class="order-title">全部订单</span>
+      </div>
+      <div id="order-list" class="order-list order-list-hook">
+        <div>
+          <!-- 顶部提示信息 -->
+          <div class="top-tip">
+            <span class="refresh-hook">下拉刷新</span>
+          </div>
+
+          <ul id="wrapper" class="list-content list-content-hook">
+
+          </ul>
+
+          <div class="bottom-tip">
+            <span class="loading-hook">查看更多</span>
+          </div>
+        </div>
+      </div>
+
+      <ul class="footer hock-footer" style="position:fixed">
+        <li class="shop">
+          <span>店铺</span>
+        </li>
+        <li class="cart">
+          <span>购物车</span>
+        </li>
+        <li class="order">
+          <span>订单</span>
+        </li>
+        <li class="my">
+          <span>我</span>
+        </li>
+      </ul>
+    </div>
+    <!--列表循环-->
+    <script id="jsr" type="text/x-jsrender">
+      <li onclick="app.gotoOrderDetails('{{:orderNum}}',event)">
+        <!--下单时间-->
+        <div class='order-item'>
+          <div class='order-time'>
+            <p class='or-time'>下单时间:
+              <span class='or-time1'>{{:createTime}}</sapn>
+          </p>
+          <p class='or-time'>订单编号:{{:orderNum}}</p>
+        </div>
+      	</div>
+      	<div class="product-wrapper">
+        {{if details !=null && details.length > 0}}{{for details}}
+        <div class='product'>
+        	<ul class='product-ul'>
+        		<li class='product-li'>
+        			<div class='product-img fl'>
+        				<img src="{{:productImage}}" class='product-dl-img'>
+        			</div>
+        			<div class='product-dd fl'>
+        				<div class='product-info'>
+        					<p class='product-p'>{{:categoryOneName}}</p>
+        					<p class='product-p'>{{:productName}}</p>
+        					<p class='product-p sku'>SKU:{{:sku}}</p></div>
+        					<div class='price-count fr'>
+        						<p class='product-p price'>¥{{:~fmoney(price,true)}}</p>
+        						<p class='product-p num fr'>x{{:productNum}}</p>
+        					</div>
+        			</div>
+        		</li>
+        	</ul>
+        </div>
+        {{/for}}
+        {{/if}}
+        <!--待支付-->
+        {{if status == 1}}
+			    <div class="action">
+			    	<span onclick="app.gotoOrderDetails('{{:orderNum}}',event)">立即支付</span>
+              <span onclick="app.updateOrderStatus({{:id}},4,event)">取消订单</span>
+          </div>
+          <!--已取消-->
+          {{else status == 4}}
+          <div class="action">
+            <span>已取消</span>
+          </div>
+          <!--已退款-->
+          {{else status == 5}}
+          <div class="action">
+            <span>已退款</span>
+          </div>
+          <!--待发货-->
+          {{else status == 6}}
+          <div class="action">
+            <span>待发货</span>
+          </div>
+          <!--待确认-->
+          {{else status == 7}}
+          <div class="action">
+            <span onclick="app.updateOrderStatus({{:id}},8,event)">确认收获</span>
+          </div>
+          <!--已完成-->
+          {{else status == 7}}
+          <div class="action">
+            <span>已完成</span>
+          </div>
+          {{/if}}
+        </div>
+        <div class='allPrice'>
+          <p class='all-price fr'>共{{:productCounts}}件商品 合计:
+            <span class='yhPrice'>¥{{:~fmoney(orderMoney,true)}}</span>
+          </p>
+        </div>
+      </li>
+    </script>
+  </body>
+  <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="../js/wechat_auth.js"></script>
+  <script type="text/javascript" src="../js/app/config.js"></script>
+  <script type="text/javascript" src="../js/until.js"></script>
+  <script type="text/javascript" src="../js/jsrender.min.js"></script>
+  <script type="text/javascript" src="../js/bscroll.min.js"></script>
+  <script type="text/javascript" src="../js/app/allOrderList.js"></script>
+
+</html>

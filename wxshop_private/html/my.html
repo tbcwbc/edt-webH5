@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>我的</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/until.css">
+  <link rel="stylesheet" href="../css/my.css">
+  <link rel="stylesheet" href="../css/weui.css">
+</head>
+
+<body>
+  <header class="my-top border-bottom-1px">
+    <div class="img">
+      <img id="head">
+    </div>
+    <div class="info">
+      <span class="name" id="nikeName"></span>
+      <span class="phone" id="tel"></span>
+    </div>
+  </header>
+  <div class="my-content">
+    <div class="sections">
+      <a class="item border-bottom-1px hock-goto" id="invoice">
+        <i class="img">
+          <img src="../images/invoice.png">
+        </i>
+        <span class="title">管理发票信息</span>
+      </a>
+      <a class="item border-bottom-1px hock-goto " id="address">
+        <i class="img">
+          <img src="../images/address.png">
+        </i>
+        <span class="title">管理收货地址</span>
+      </a>
+    </div>
+    <div class="sections">
+      <a class="item hock-goto" id="user">
+        <i class="img">
+          <img src="../images/user.png">
+        </i>
+        <span class="title">个人信息</span>
+      </a>
+      <a class="item hock-goto" id="contact">
+        <i class="img">
+          <img src="../images/tell.png">
+        </i>
+        <span class="title">联系销售</span>
+      </a>
+    </div>
+  </div>
+  <div class="btn close-hook">退出账号</div>
+  <ul class="footer hock-footer">
+    <li class="shop">
+      <span>店铺</span>
+    </li>
+    <li class="cart">
+      <i class="shopCartCounts hide" id="shopCartCounts"></i>
+      <span>购物车</span>
+    </li>
+    <li class="order">
+      <span>订单</span>
+    </li>
+    <li class="my active">
+      <span>我</span>
+    </li>
+  </ul>
+
+  <div class="js_dialog" id="Dialog" style="display: none;">
+    <div class="weui-mask"></div>
+    <div class="weui-dialog">
+        <div class="dialog-text"><span>销售姓名:<span id="employeeName">Fiona</span></span></div>
+        <div class="dialog-text"><span>联系方式:<span id="employeePhone">Fiona</span></span></div>
+        <div class="weui-dialog__ft">
+        	<a href="tel:4007007899" class="weui-dialog__btn weui-dialog__btn_primary dialog__btn" id="ok"><span class="tel-icon"></span>联系销售</a>
+            <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_default dialog__btn" id="no">关闭</a>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../js/wechat_auth.js"></script>
+<script type="text/javascript" src="../js/app/config.js"></script>
+<script type="text/javascript" src="../js/until.js"></script>
+<script type="text/javascript" src="../js/app/my.js"></script>
+
+
+</html>

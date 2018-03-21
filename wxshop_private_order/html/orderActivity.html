@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>订单中心</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/until.css">
+    <link rel="stylesheet" href="../css/orderActivity.css">
+    <link rel="stylesheet" href="../css/remind.css">
+    <link rel="stylesheet" href="../css/weui.css">
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="all-order-title allOrder-hook">
+        <img src="../images/order01.png" alt="" class="allOrder-img">
+        <span class="order-title">全部订单</span>
+      </div>
+      <!-- 导航 -->
+      <div class="order-nav">
+        <ul class="nav-ul">
+          <li class="nav-li active" id="waitPay">待付款</li>
+          <li class="nav-li" id="waitSend">待发货</li>
+          <li class="nav-li" id="waitGoods">待收货</li>
+          <li class="nav-li" id "done">已完成</li>
+          <li class="nav-li" id "canceled">已取消</li>
+        </ul>
+      </div>
+
+      <div id="order-list" class="order-list order-list-hook" style="bottom: 0;">
+        <div>
+          <!-- 顶部提示信息 -->
+          <div class="top-tip">
+            <span class="refresh-hook">下拉刷新</span>
+          </div>
+
+          <ul id="wrapper" class="list-content list-content-hook">
+
+          </ul>
+
+          <div class="bottom-tip">
+            <span class="loading-hook">查看更多</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="loadingToast" style="display:none">
+      <div class="weui-mask_transparent"></div>
+      <div class="weui-toast">
+        <i class="weui-loading weui-icon_toast"></i>
+        <p class="weui-toast__content">数据加载中...</p>
+      </div>
+    </div>
+    <!--列表循环-->
+    <script id="jsr" type="text/x-jsrender">
+      <li id="{{:id}}" onclick="app.gotoOrderDetails('{{:orderNum}}',event)">
+        <!--下单时间-->
+        <div class='order-item'>
+          <div class='order-time'>
+            <p class='or-time'>下单时间:
+              <span class='or-time1'>{{:createTime}}</sapn>
+          </p>
+          <p class='or-time'>订单编号:{{:orderNum}}</p>
+        </div>
+      	</div>
+      	<div class="product-wrapper">
+      		{{if details !=null && details.length > 0}}{{for details}}
+			    <div class='product'>
+			    	<ul class='product-ul'>
+			    		<li class='product-li'>
+			    			<div class='product-img fl'>
+			    				<img src="{{:productImage}}" class='product-dl-img'>
+			    			</div>
+			    			<div class='product-dd fl'>
+			    				<div class='product-info'>
+			    					<p class='product-p'>{{:productName}}</p>
+			    					<p class='product-p sku'>{{:sku}}</p>
+			    				</div>
+			    					<div class='price-count fr'>
+			    						<p class='product-p price'>¥{{:~fmoney(discountPrice,true)}}</p>
+			    						<p class='product-p num fr'>x{{:productNum}}</p>
+			    					</div>
+			    			</div>
+			    		</li>
+			    	</ul>
+			    </div>
+			    {{/for}}
+			    {{/if}}
+			    {{if status == 1}}
+			    <div class="action">
+			    	<span onclick="app.gotoOrderDetails('{{:orderNum}}',event)">立即支付</span>
+            <a onclick="app.updateOrderStatus({{:id}},4,event)">取消订单</a>
+          </div>
+          {{else status == 7}}
+          <div class="action" >
+            <span onclick="app.updateOrderStatus({{:id}},8,event)">确认收获</span>
+          </div>
+          {{/if}}
+        </div>
+
+        <div class='allPrice'>
+          <p class='all-price fr'>共{{:productCounts}}件商品 合计:
+            <span class='yhPrice'>¥{{:~fmoney(discountAmount,true)}}</span>
+          </p>
+        </div>
+      </li>
+
+    </script>
+  </body>
+  <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+  <script type="text/javascript" src="../js/wechat_auth.js"></script>
+  <script type="text/javascript" src="../js/app/config.js"></script>
+  <script type="text/javascript" src="../js/until.js"></script>
+  <script type="text/javascript" src="../js/jsrender.min.js"></script>
+  <script type="text/javascript" src="../js/bscroll.min.js"></script>
+  <script type="text/javascript" src="../js/app/orderList.js"></script>
+
+  <script>
+    
+   
+  
+  </script>
+</html>

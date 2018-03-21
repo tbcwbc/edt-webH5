@@ -1,0 +1,134 @@
+.wraaper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 438px;
+}
+
+.search-wrap {
+  background: #333;
+}
+
+.classification-icon {
+  background: url(../images/sort.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+
+/*商品列表*/
+
+.list-wrapper {
+  position: absolute;
+  top: 5.5rem;
+  bottom: 5rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.list-wrapper .top-tip {
+  position: absolute;
+  top: -4rem;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  color: #555;
+}
+
+.list-content {
+  overflow: hidden;
+}
+
+.list-wrapper .bottom-tip {
+  width: 100%;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  text-align: center;
+  color: #777;
+  background: #f2f2f2;
+}
+
+.list-wrapper .no-good {
+  line-height: 44rem;
+  text-align: center;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+.list-wrapper .good-item {
+  position: relative;
+  margin-bottom: .5rem;
+  float: left;
+  width: 49.3%;
+  background-color: #fff;
+}
+
+.list-wrapper .good-item:nth-child(odd) {
+  margin-right: 1.3%;
+}
+
+.list-wrapper .good-item .good-img {
+  position: relative;
+  margin-bottom: .6rem;
+  /*padding: .3rem 1rem;*/
+  height: 15rem;
+  text-align: center;
+}
+
+.list-wrapper .good-item .good-img img {
+  /*position: absolute;*/
+  max-width: 100%;
+  height: 100%;
+  /*top: 0;
+	left: 0;*/
+}
+
+
+/*.list-wrapper .good-item .remark {
+	position: absolute;
+	display: inline-block;
+	margin-left: 1.2rem;
+	padding: .1rem .4rem;
+	font-size: 1rem;
+	color: #F05050;
+	border: 1px solid #F05050;
+}*/
+
+.list-wrapper .good-item .title {
+  margin: 2.4rem 0 .5rem 1rem;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.list-wrapper .good-item .title span {
+  margin-left: .3rem;
+}
+
+.list-wrapper .good-item .detail {
+  position: relative;
+  margin: 0 1rem 1rem;
+  line-height: 1.6rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.list-wrapper .good-item .detail .price {
+  font-size: 1.2rem;
+  color: #151515;
+}
+
+.list-wrapper .good-item .detail .stock {
+  color: #3f3f3f;
+}
+
+.list-wrapper .good-item .detail .add {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: url(../images/cart02.png) no-repeat center;
+  background-size: 100%;
+}

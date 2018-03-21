@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>店铺首页</title>
+    <link rel="stylesheet" href="../css/weui.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/until.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/remind.css">
+  </head>
+
+  <body>
+    <div class="wraaper">
+      <div class="search-wrap">
+        <div class="search-bar-wrap">
+          <input type="text" class="search-bar search-bar-hook" />
+          <img class="fa fa-search search-icon" src="../images/search.png">
+        </div>
+        <div class="classification classify-hook">
+          <div class="classification-icon"></div>
+          <span class="classify">分类</span>
+        </div>
+      </div>
+      <div class="list-wrapper list-wrapper-hook">
+        <div>
+          <!-- 顶部提示信息 -->
+          <div class="top-tip">
+            <span class="refresh-hook">下拉刷新</span>
+          </div>
+          <ul id="wrapper" class="list-content list-content-hook">
+            <!--<li class="good-item">
+							<div class="good-img">
+								<img src="../images/goods02.png" />
+							</div>
+							<span class="remark">限制购买</span>
+							<h3 class="title">麦卡伦<span>璀璨</span></h3>
+							<p class="detail">直销价：<span class="price">￥36,000</span><span class="stock">(12件库存)</span>
+								<a class="add"></a>
+							</p>
+						</li>-->
+          </ul>
+          <div class="bottom-tip">
+            <span class="loading-hook">查看更多</span>
+          </div>
+        </div>
+      </div>
+      <!--footer-->
+      <ul class="footer hock-footer">
+        <li class="shop">
+          <span>店铺</span>
+        </li>
+        <li class="cart">
+          <i class="shopCartCounts hide" id="shopCartCounts"></i>
+          <span>购物车</span>
+        </li>
+        <li class="order">
+          <span>订单</span>
+        </li>
+        <li class="my">
+          <span>我</span>
+        </li>
+      </ul>
+    </div>
+    <!--列表循环-->
+    <script id="jsr" type="text/x-jsrender">
+      {{if data != null && data.length >0}} {{for data}}
+      <li class="good-item">
+        <div class="good-img" onclick="app.detail({{:id}})">
+          <img src="{{:productImage}}" />
+        </div>
+        <!--{{if isLimit == 1}}
+				<span class="remark">限制购买</span> {{/if}}-->
+        <h3 class="title">{{:productSimplifyName}}<span></h3>
+        <p class="detail">直销价：<span class="price">￥{{:~fmoney(productMemberPrice)}}</span><span class="stock">({{:saleStock}}件库存)</span>
+          <a class="add" onclick="app.addShopCart({{:id}},{{:isLimit}},{{:~init(limitCounts)}},{{:~init(limitMoney)}})"></a>
+        </p>
+      </li>
+      {{/for}}{{else}}
+      {{if page == 1}}
+      <li class="no-good">无搜索结果</li>
+      {{/if}}
+      {{/if}}
+    </script>
+  </body>
+
+  <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="../js/wechat_auth.js"></script>
+  <script type="text/javascript" src="../js/app/config.js"></script>
+  <script type="text/javascript" src="../js/until.js"></script>
+  <script type="text/javascript" src="../js/jsrender.min.js"></script>
+  <script type="text/javascript" src="../js/bscroll.min.js"></script>
+  <script type="text/javascript" src="../js/app/app.js"></script>
+
+</html>

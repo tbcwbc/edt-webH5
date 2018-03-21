@@ -1,0 +1,1139 @@
+img {
+    display: block;
+}
+
+/*tabbar*/
+.my-bar {
+    background-color: white;
+    width: 100%;
+    height: 4em;
+    bottom: 0px;
+    position: fixed;
+}
+
+.stick {
+    right: 0;
+    width: 50px;
+    height: 50px;
+    bottom: 4em;
+    background-image: url(../images/back-top@3x.png);
+    background-size: 100% 100%;
+    position: fixed;
+
+}
+
+.titleImg {
+    width: 100%;
+    padding: 0%;
+}
+
+.tab-item {
+    float: left;
+    width: 20%;
+    min-height: 100%;
+    background-color: white;
+}
+
+.tab-item img {
+    margin: 0.5em auto;
+    height: 2.5em;
+}
+
+.active-count {
+    width: 100%;
+    padding-top: 2%;
+
+    top: 300px;
+}
+
+.join-count {
+    float: left;
+    font-size: 14px;
+    width: 33%;
+    text-align: center;
+    color: #c4c4c4;
+}
+
+div.join-count:nth-child(n+2) {
+    border-left: 1px solid #dddddd;
+}
+
+.count {
+    margin-top: 2%;
+}
+
+.clear {
+    clear: left;
+}
+
+.apply {
+    clear: both;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 2.5%;
+
+}
+
+.apply img {
+    width: 100%;
+    height: 100%;
+}
+
+.take-part {
+    float: left;
+    margin: 3% 5% 5%;
+}
+
+.lately {
+    float: left;
+    display: inline-block;
+    width: 44%;
+}
+
+.all-of {
+    float: right;
+    display: inline-block;
+    width: 44%;
+}
+
+.all-of img {
+    width: 100%;
+    height: 100%;
+}
+
+.lately img {
+    width: 100%;
+    height: 100%;
+}
+
+.search-name {
+    clear: both;
+    margin: auto 5%;
+    height: 2.5em;
+    border: 1px #c4c4c4 solid;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    box-shadow: #c4c4c4 2px 2px 4px inset;
+}
+
+.search-name img {
+    float: left;
+    margin: 0.5em 1em;
+    height: 1.5em;
+}
+
+.search-name input {
+    background: none;
+    border: 0px;
+    margin: auto;
+    color: #c4c4c4;
+    height: 100%;
+    font-size: 15px;
+    width: 80%;
+    /* 去除聚焦边框 */
+    outline: 0;
+}
+
+.girl-info {
+    margin: 6% 5% 5%;
+}
+
+.number {
+    width: 100%;
+    font-size: 13px;
+}
+
+.number-color {
+    color: #f96667;
+}
+
+.img-arr {
+    width: 100%;
+    margin: auto;
+}
+
+.img-arr img {
+    width: 100%;
+    height: 15em;
+}
+
+.head-line {
+    clear: both;
+    margin-left: 5%;
+    padding-top: 2%;
+}
+
+.title {
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.title span {
+    margin: auto;
+    color: #f96667;
+    font-size: 20px;
+}
+
+.flower {
+    float: left;
+    display: inline-block;
+    margin-top: 1.5%;
+    height: 20px;
+    width: 20px;
+}
+
+.flower img {
+    width: 100%;
+    height: 100%;
+}
+
+.introduce {
+    margin-left: 10%;
+    margin-right: 5%;
+}
+
+.introduce p {
+    font-family: "Hiragino Sans GB";
+    font-size: 16px;
+}
+
+.ol-list {
+    font-family: "Hiragino Sans GB";
+    font-size: 16px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.page-normal a {
+    color: #c4c4c4;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 10px;
+
+}
+
+.page-normal {
+    text-align: center;
+
+    font-size: 0;
+/ / 解决内联元素间隔bug
+
+}
+
+/*动画*/
+
+#block {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    margin: auto;
+    -webkit-transition: background-color 3s;
+}
+
+#block:hover {
+    background-color: blue;
+}
+
+#experiment {
+    -webkit-perspective: 800px;
+    -webkit-perspective-origin: 50% 50%;
+}
+
+#a {
+    width: 200px;
+    height: 200px;
+    background-color: #f96667;
+    -webkit-transform: rotateX(45deg);
+}
+
+#my-3d {
+    -webkit-perspective: 1000px;
+    -webkit-perspective-origin: 50% 50%;
+    overflow: hidden;
+}
+
+#page-group {
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    -webkit-transform-style: preserve-3d;
+    position: relative;
+}
+
+.page {
+    width: 360px;
+    height: 360px;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 360px;
+    line-height: 360px;
+    position: absolute;
+}
+
+#page1 {
+    -webkit-transform-origin: bottom;
+    -webkit-transition: -webkit-transform 1s linear;
+}
+
+#page2, #page3, #page4, #page5, #page6 {
+    -webkit-transform-origin: bottom;
+    -webkit-transition: -webkit-transform 1s linear;
+    -webkit-transform: rotateX(90deg);
+}
+
+.rotate {
+    width: 200px;
+    height: 100px;
+    margin: auto;
+    background-color: red;
+    /*transform: rotate(-20deg);*/
+
+}
+
+.keyframe {
+
+    background-color: yellow;
+    height: 300px;
+    width: 300px;
+    margin: auto;
+
+}
+
+.keyframe:hover {
+    animation: change 2s;
+}
+
+@keyframes change {
+    from {
+        background: yellow;
+    }
+    to {
+        background: #f96667;
+    }
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+#my-content {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+
+}
+
+.my-wrap {
+    position: relative;
+}
+
+.my-wrap > li {
+    background-color: rgb(244,224,204);
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+
+
+/*第一页背景*/
+.a_background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.a_background_top {
+    width: 100%;
+    height: 71.6%;
+    background-image: url("http://img.mukewang.com/55addf6900019d8f14410645.png");
+    background-size: 100% 100%;
+}
+
+.a_background_middle {
+    width: 100%;
+    height: 13.1%;
+    background-image: url("http://img.mukewang.com/55addf800001ff2e14410118.png");
+    background-size: 100% 100%;
+}
+
+.a_background_bottom {
+    width: 100%;
+    height: 15.3%;
+    background-image: url("http://img.mukewang.com/55addfcb000189b314410138.png");
+    background-size: 100% 100%;
+}
+
+.charector {
+    width: 151px;
+    height: 291px;
+    background: url(http://img.mukewang.com/55ade248000198ae10550582.png) -0px -291px no-repeat;
+    position: absolute;
+    /* 设置一个元素的坐标 */
+    left: 6%;
+    top: 55%;
+}
+
+/*慢走*/
+.slowWalk {
+    -webkit-animation: person-slow 950ms infinite steps(1, start);
+    -moz-animation: person-slow 950ms infinite steps(1, start);
+}
+
+@-webkit-keyframes person-slow {
+    0% {
+        background-position: -0px -291px;
+    }
+    25% {
+        background-position: -602px -0px;
+    }
+    50% {
+        background-position: -302px -291px;
+    }
+    75% {
+        background-position: -151px -291px;
+    }
+    100% {
+        background-position: -0px -291px;
+    }
+}
+
+@-moz-keyframes person-slow {
+    0% {
+        background-position: -0px -291px;
+    }
+    25% {
+        background-position: -602px -0px;
+    }
+    50% {
+        background-position: -302px -291px;
+    }
+    75% {
+        background-position: -151px -291px;
+    }
+    100% {
+        background-position: -0px -291px;
+    }
+}
+
+.button {
+    position: absolute;
+    bottom: 0;
+}
+
+#sun {
+    background: url("http://img.mukewang.com/55ade004000106c202010201.png") no-repeat;
+    position: absolute;
+    z-index: 1;
+    top: -30px;
+    height: 201px;
+    width: 201px;
+    right: 40%;
+    -webkit-animation: rotation 30s;
+}
+
+@-webkit-keyframes rotation {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    100% {
+        transform: translateX(-2000px) translateY(400px);
+    }
+}
+
+.cloud {
+    z-index: 2;
+    position: absolute;
+}
+
+.cloud1 {
+    width: 181px;
+    height: 101px;
+    left: -5%;
+    top: 15%;
+    background: url("http://img.mukewang.com/55addfde0001aec501810101.png");
+    -webkit-animation: smallCloud 60s;
+
+}
+
+@-webkit-keyframes smallCloud {
+    0% {
+        left: -5%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.cloud2 {
+    width: 301px;
+    height: 140px;
+    right: -5%;
+    background: url("http://img.mukewang.com/55addff500016df503010140.png");
+    -webkit-animation: largeCloud 60s;
+}
+
+@-webkit-keyframes largeCloud {
+    0% {
+        right: -5%;
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+/*第二页*/
+.b_background {
+    width: 100%;
+    height: 100%;
+    background-image: url("http://img.mukewang.com/55ade06f00015a0d14410901.png");
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+.b_background_preload {
+    background: url("http://img.mukewang.com/55ade0be0001a37914410901.png") no-repeat -9999px -9999px;
+}
+
+.lamp-bright {
+    background-image: url("http://img.mukewang.com/55ade0be0001a37914410901.png");
+}
+
+/*商店*/
+
+.shop {
+    width: 39.5%;
+    height: 35.5%;
+    position: absolute;
+    left: 29%;
+    top: 36.5%;
+}
+
+.door {
+    position: absolute;
+    width: 32%;
+    height: 100%;
+    top: 32%;
+    height: 68%;
+    overflow: hidden;
+    left: 58.5%;
+}
+
+.door-left,
+.door-right {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+}
+
+.door-left {
+    left: 0%;
+    background: url(http://img.mukewang.com/55ade1140001050d00910231.png);
+    background-size: 100% 100%;
+}
+
+.door-right {
+    left: 50%;
+    background: url(http://img.mukewang.com/55ade12100019f5b00910231.png);
+    background-size: 100% 100%;
+}
+
+.pauseWalk {
+    -webkit-animation-play-state: paused;
+}
+
+.salce {
+    background-color: red;
+    -webkit-animation: bigsmall 1s infinite ease-in;
+}
+
+@-webkit-keyframes bigsmall {
+    0% {
+        transform: scale(0.9, 0.9);
+    }
+    50% {
+        transform: scale(1.1, 1.1);
+    }
+    75% {
+        transform: scale(0.9, 0.9);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.fadeIn {
+    -webkit-animation: fadeIn 2s ease-out;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    70% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.move-a {
+    -webkit-animation: moveTo 1s ease-out forwards;
+}
+
+@-webkit-keyframes moveTo {
+    0% {
+        left: -100px;
+    }
+    100% {
+        left: 200px;
+    }
+}
+
+
+div img{
+    width: 100%;
+    height: auto;
+}
+
+.box {
+    position: absolute;
+    top:30%;
+    left: 10%;
+    width: 80%;
+    /*height: 40%;*/
+    /*background-image: url("../images-1/Big Godiva box Empty.png");*/
+    /*background-size: 100% 100%;*/
+    /*z-index: 2;*/
+
+}
+
+.box img:first-child{
+    width: 100%;
+    height: auto;
+}
+
+
+.box.begin{
+    /*animation: hiddenImage 0.8s forwards 3s;*/
+}
+
+
+
+.next{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    background-image: url("../images/1.png");
+    background-size: 100% 100%;
+    transform: scale(1,1);
+    /*animation: change1 0.7s ease-in forwards 4s;*/
+    transform-origin: 100% 100%;
+}
+
+@-webkit-keyframes change1 {
+    100%{transform: scale(0.6,0.6)}
+}
+
+
+
+@-webkit-keyframes hiddenImage {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+
+}
+
+.begin{
+
+}
+
+
+.class1 {
+    position: absolute;
+    width: 25%;
+    height: 33.3%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: scale(1, 1);
+}
+
+
+.littleImg{
+    position: absolute;
+    height: 80% !important;
+    width: 80% !important;
+    left: 10%;
+    top: 10%;
+}
+
+
+.box.begin .class1{
+    animation: makeAnimate 1s ease-out forwards 1s;
+}
+
+@-webkit-keyframes makeAnimate {
+
+    0% {
+        opacity: 1
+    }
+    10% {
+        transform: scale(1.2, 1.2)
+    }
+    30% {
+        transform: scale(1, 1)
+    }
+    60% {
+        transform: scale(1.1, 1.1)
+    }
+    80% {
+        transform: scale(1, 1)
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+.class2 {
+    position: absolute;
+    width: 25%;
+    height: 33.3%;
+    top: 0;
+    left: 50%;
+    opacity: 0;
+    transform: scale(1, 1);
+
+}
+.box.begin .class2{
+    animation: makeAnimate 1s ease-out forwards 1.3s;
+}
+
+.class3 {
+    position: absolute;
+    width: 25%;
+    height: 33.3%;
+    top: 0;
+    left: 75%;
+    opacity: 0;
+    transform: scale(1, 1);
+    /*animation: makeAnimate 1s ease-out forwards 1.6s;*/
+}
+.box.begin .class3{
+    animation: makeAnimate 1s ease-out forwards 1.6s;
+}
+.class4 {
+    position: absolute;
+    width: 25%;
+    height: 33.3%;
+    top: 33.3%;
+    left: 0;
+    opacity: 0;
+    transform: scale(1, 1);
+    /*animation: makeAnimate 1s ease-out forwards 1.3s;*/
+}
+.box.begin .class4{
+    animation: makeAnimate 1s ease-out forwards 1.3s;
+}
+.class5 {
+    position: absolute;
+    width: 25%;
+    height: 33.3%;
+    top: 33.3%;
+    left: 50%;
+    opacity: 0;
+    transform: scale(1, 1);
+    /*animation: makeAnimate 1s ease-out forwards 1.9s;*/
+}
+.box.begin .class5{
+    animation: makeAnimate 1s ease-out forwards 1.9s;
+}
+.class6 {
+    position: absolute;
+    width: 25%;
+    height: 33.3%;
+    top: 33.3%;
+    left: 75%;
+    opacity: 0;
+    transform: scale(1, 1);
+    /*animation: makeAnimate 1s ease-out forwards 1.9s;*/
+}
+.box.begin .class6{
+    animation: makeAnimate 1s ease-out forwards 1.9s;
+}
+.class7 {
+    position: absolute;
+    width: 25%;
+    height: 33.3%;
+    top: 66.6%;
+    left: 0;
+    opacity: 0;
+    transform: scale(1, 1);
+    /*animation: makeAnimate 1s ease-out forwards 1.6s;*/
+}
+.box.begin .class7{
+    animation: makeAnimate 1s ease-out forwards 1.6s;
+}
+.class8 {
+    position: absolute;
+    width: 25%;
+    height: 33.3%;
+    top: 66.6%;
+    left: 50%;
+    opacity: 0;
+    transform: scale(1, 1);
+    /*animation: makeAnimate 1s ease-out forwards 1.9s;*/
+}
+
+.box.begin .class8{
+    animation: makeAnimate 1s ease-out forwards 1.9s;
+}
+.class9 {
+    position: absolute;
+    width: 25%;
+    height: 33.3%;
+    top: 66.6%;
+    left: 75%;
+    opacity: 0;
+    transform: scale(1, 1);
+    /*animation: makeAnimate 1s ease-out forwards 2.1s;*/
+}
+.box.begin .class9{
+     animation: makeAnimate 1s ease-out forwards 2.1s;
+ }
+
+.logo{
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    width: 60%;
+    animation: logochange 1s forwards 2s;
+
+
+    transform-origin: 50% 100%;
+    z-index: 2;
+}
+
+
+@-webkit-keyframes logochange {
+    100%{transform: scale(0.4,0.4) translate(0, 0)}
+}
+
+.border{
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    width: 60%;
+    opacity: 0;
+    animation: showBorder 1s forwards 2.2s;
+}
+
+
+
+@-webkit-keyframes showBorder {
+    0%{opacity: 0; transform: scale(0.4,0.4)}
+    100%{
+        opacity:1;
+        transform: scale(1,1);
+    }
+
+}
+
+.happybirth{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 80%;
+    opacity: 0;
+    animation: showTitle 0.5s forwards 3.5s;
+
+}
+
+
+
+@-webkit-keyframes showTitle {
+    100%{opacity: 1}
+}
+
+.left-bottom{
+    position: absolute;
+    top:80%;
+    left: -10%;
+    width: 30%;
+    animation: showF1 0.5s forwards 3.2s;
+    opacity: 0;
+    z-index:1;
+}
+
+
+
+@-webkit-keyframes showF1 {
+    0%{transform: scale(0.4,0.4)}
+    100%{opacity: 1;transform: scale(1,1)}
+}
+
+.right-top{
+    position: absolute;
+    top:-25%;
+    left: 70%;
+    width: 38%;
+    animation: showF1 0.5s forwards 3.7s;
+    opacity: 0;
+    z-index: 1;
+
+}
+
+
+
+.right-top-mid{
+    position: absolute;
+    top:-30%;
+    left: 53%;
+    width: 33%;
+    animation: showF1 0.5s forwards 3.9s;
+    opacity: 0;
+}
+
+
+.left-bottom-right{
+    position: absolute;
+    top:70%;
+    left: 7%;
+    width: 30%;
+    animation: showF1 0.5s forwards 4.1s;
+    opacity: 0;
+
+}
+
+
+
+.left-bottom-mid{
+    position: absolute;
+    top:40%;
+    left: -18%;
+    width: 30%;
+    z-index: -1;
+    opacity: 0;
+    animation: showF2 1s forwards 4.5s;
+}
+@-webkit-keyframes showF2 {
+    0%{transform: translate(50px,0);
+        opacity:1;}
+    100%{transform: translate(0,0);opacity: 1}
+}
+
+.top-mid{
+    position: absolute;
+    top:-30%;
+    left: 30%;
+    width: 30%;
+    transform: rotate(0deg);
+    transform-origin: 100% 100%;
+    z-index: -1;
+    opacity: 0;
+    animation: makeRotate 1s forwards 4.7s;
+}
+@-webkit-keyframes makeRotate {
+    0%{transform: rotate(-90deg);opacity: 1}
+    100%{transform: rotate(0deg);opacity: 1}
+}
+
+.left-top{
+    position: absolute;
+    top:15%;
+    left: -13%;
+    width: 20%;
+    z-index: -2;
+    opacity: 0;
+    animation: showF2 1s forwards 4.3s;
+}
+
+.right-mid{
+    position: absolute;
+    top:5%;
+    left: 90%;
+    width: 20%;
+    z-index: -2;
+    opacity: 0;
+    animation: showF3 1s forwards 4.3s;
+}
+
+@-webkit-keyframes showF3 {
+    0%{transform: translate(-50px,0);
+        opacity:1;}
+    100%{transform: translate(0,0);opacity: 1}
+}
+/*左下角叶子*/
+.leaf1{
+    position: absolute;
+    top:65%;
+    left: -20%;
+    width: 30%;
+    z-index: -1;
+    opacity: 0;
+    animation: leaf1 0.2s ease-out forwards 4.9s;
+}
+
+@-webkit-keyframes leaf1 {
+    0%{transform: scale(0.5,0.5);
+        opacity:1;}
+    80%{transform: scale(1.1,1.1);
+        opacity:1;}
+    100%{transform: scale(1,1);opacity: 1}
+}
+
+/*底部叶子*/
+.leaf2{
+    position: absolute;
+    top:70%;
+    left: 35%;
+    width: 40%;
+    z-index: -1;
+    opacity: 0;
+    animation: leaf2 1s forwards 4.9s;
+}
+
+@-webkit-keyframes leaf2 {
+    0%{transform: translate(0,-50px);
+        opacity:1;}
+    100%{transform: translate(0,0);opacity: 1}
+}
+
+
+
+/*右上角叶子*/
+.leaf3{
+    position: absolute;
+    top:-45%;
+    left: 85%;
+    width: 38%;
+    z-index: -1;
+    opacity: 0;
+    animation: leaf3 0.5s forwards 5.1s;
+}
+@-webkit-keyframes  leaf3 {
+    0%{transform: translate(-100px,0);
+        opacity:1;}
+    100%{transform: translate(0,0);opacity: 1}
+}
+
+
+/*顶部叶子*/
+.leaf4{
+    position: absolute;
+    top:-45%;
+    left: 35%;
+    width: 38%;
+    z-index: -1;
+    opacity: 0;
+    transform: rotate(0deg);
+    transform-origin: 100% 100%;
+    animation: makeRotate 1s forwards 5.3s;
+}
+
+.leaf5{
+    position: absolute;
+    top:70%;
+    left: 12%;
+    width: 38%;
+    z-index: -1;
+    opacity: 0;
+    animation: leaf2 1s forwards 4.2s;
+}
+
+
+.nextpage{
+    position: absolute;
+    bottom: 20%;
+    width: 100%;
+    text-align: center;
+    color: gray;
+    opacity: 0;
+    animation: showBtn 1.5s linear infinite alternate 4s;
+}
+
+@-webkit-keyframes showBtn {
+  0%{opacity: 1; transform: scale(0.9,0.9)}
+    100%{opacity: 1; transform: scale(1,1)}
+}
+
+.nextbtn{
+    position: absolute;
+    top: 40px;
+    left: 45%;
+    width: 10%;
+}
+
+
+.progress{
+    position: absolute;
+    top:60%;
+    left: 20%;
+    width: 60%;
+    height: 1%;
+    border: 1px solid #f96667;
+    border-radius: 15px;
+    animation: hid 0.2s forwards 2s;
+}
+
+@-webkit-keyframes hid {
+    100%{opacity: 0}
+}
+
+.tiao{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background-color: #2aabd2;
+    opacity: 0;
+    animation: getpro 2s ease-in forwards;
+}
+
+@-webkit-keyframes getpro {
+    0%{width: 0;opacity: 1}
+    100%{width: 100%;opacity: 1}
+}
+
+.fix{
+
+    float: left;
+    height: 100px;
+    overflow: scroll;
+    background-color: white;
+
+}
+
+.sheng{
+    width: 100px;
+    background-color: gray;
+}
+.sheng li{
+   text-align: center;
+    height: 40px;
+}
+
+.shi{
+    width: 200px;
+    background-color: #f96667;
+}
+
+.shi li{
+    text-align: center;
+    height: 30px;
+
+}

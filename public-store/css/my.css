@@ -1,0 +1,195 @@
+
+.my-top {
+  position: relative;
+  width: 100%;
+  height: 17rem;
+  background-color: #fff;
+}
+
+.my-top .img {
+  position: absolute;
+  top: 2.5rem;
+  left: 50%;
+  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  -o-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  width: 7rem;
+  height: 7rem;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.50);
+}
+
+.my-top .img img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.my-top .info {
+  position: absolute;
+  left: 50%;
+  bottom: 2.5rem;
+  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  -o-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  text-align: center;
+}
+
+.my-top .info span {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+.my-top .info .name {
+  color: #333;
+}
+
+.my-top .info .phone {
+  color: #151515;
+}
+
+.my-content {
+  background: rgba(255, 255, 255, .9);
+  box-shadow: inset 0 0 0 0 #FFFFFF;
+}
+
+.my-content .sections {
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:flex;
+  position: relative;
+}
+
+.my-content .sections .item {
+  position: relative;
+  -webkit-box-flex:1;
+  -webkit-flex:1;
+  flex:1;
+  padding: 3rem 0;
+}
+
+.my-content .sections .item:first-child {
+  border-right: 1px solid #f4f4f4;
+}
+
+.my-content .sections .item .img {
+  display: inline-block;
+  margin: 0 2rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.my-content .sections .item img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.my-content .sections .item .title {
+  display: inline-block;
+  font-size: 1.3rem;
+  color: #333;
+  line-height: 2rem;
+  vertical-align: middle;
+}
+
+
+.btn{
+	position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+  -o-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+    transform: translate(-50%);
+    bottom: 7rem;
+}
+.popup{
+  position: fixed;
+  padding: 1rem 1.5rem 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 56%;
+  background: #fff;
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.popup .pop-content{
+  padding: 1.2rem 0;
+  border-bottom: 1px solid #eee;
+}
+.popup .pop-content p{
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 1.3rem;
+}
+.popup .pop-content p span{
+  margin-left: .3rem;
+}
+.popup .pop-btn{
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:flex;
+  padding: .3rem 0;
+  height: 3.2rem;
+  line-height: 3.2rem;
+  text-align: center;
+}
+.popup .pop-btn span,.popup .pop-btn a{
+  display: inline-block;
+  -webkit-box-flex:1;
+  -webkit-flex:1;
+  flex:1;
+}
+.popup .pop-btn a{
+  border-right: 1px solid #eee;
+}
+a,a:hover {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  color:#333;
+}
+
+.dialog-text{
+  margin: 1.6rem;
+  line-height: 2rem;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #333;
+}
+.weui-dialog .dialog__btn{
+  padding: 1rem 0;
+  color: #333;
+  font-size: 1.7rem;
+  line-height: 2.2rem;
+}
+.weui-dialog .tel-icon{
+  position: relative;
+  display: inline-block;
+  margin-right: .5rem;
+  width: 1.4rem;
+  height: 2rem;
+  box-sizing: border-box;
+  border: .2rem solid #BEA474;
+  border-bottom: .4rem solid #BEA474;
+  vertical-align: top;
+}
+.weui-dialog .tel-icon:after{
+  position: absolute;
+  content: "";
+  bottom: -.3rem;
+  left: .4rem;
+  width: .2rem;
+  height: .2rem;
+  border-radius: 50%;
+  background: #fff;
+  
+}
