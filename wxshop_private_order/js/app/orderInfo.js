@@ -32,6 +32,9 @@ var app = {
         app.orderClassification();
         //总金额
         app.totalAmount = response.data.orderMoney;
+        if(response.data.channel == 3){
+        	app.totalAmount = response.data.discountAmount;
+        }
         // 商品详情
         app.showOrderInfo(response.data);
         // 订单失效倒计时
@@ -161,26 +164,27 @@ var app = {
   },
   // 支付前 确认订单
   onlineOrder: function() {
-    var param = {
-      'canUseMemberPrice': 1, //可否使用会员价 1可以 0 不可以
-      'orderMoney': app.totalAmount,
-      'freight': 0, //运费 0
-      'discount': 0, //优惠金额
-      'memberPay': 0,
-      'totalPay': app.totalAmount, //应付金额
-      'productMoney': app.totalAmount, //商品金额
-      'orderId': app.orderId,
-      'productList': app.productDetailList
-    };
-    wechatapi.loadingBox();
-    wechat.post_data(API.gateway + API.onlineOrder, param, function(response) {
-      wechatapi.closeLoading();
-      if(response.code == ERR_OK) {
-        app.pay();
-      } else {
-        wechatapi.prompt(response.msg);
-      }
-    });
+  	app.pay();
+//  var param = {
+//    'canUseMemberPrice': 1, //可否使用会员价 1可以 0 不可以
+//    'orderMoney': app.totalAmount,
+//    'freight': 0, //运费 0
+//    'discount': 0, //优惠金额
+//    'memberPay': 0,
+//    'totalPay': app.totalAmount, //应付金额
+//    'productMoney': app.totalAmount, //商品金额
+//    'orderId': app.orderId,
+//    'productList': app.productDetailList
+//  };
+//  wechatapi.loadingBox();
+//  wechat.post_data(API.gateway + API.onlineOrder, param, function(response) {
+//    wechatapi.closeLoading();
+//    if(response.code == ERR_OK) {
+//      app.pay();
+//    } else {
+//      wechatapi.prompt(response.msg);
+//    }
+//  });
   },
   // 支付
   pay: function() {

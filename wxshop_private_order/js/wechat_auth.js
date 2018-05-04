@@ -4,6 +4,9 @@
 var wechat = new wechatAPI();
 var cId = wechat.get_url_param("cId");
 
+//var URL = "http://dtc.ocheng.me/h5/";
+var URL = "https://edrington.shop/h5/";
+
 if (!String.prototype.format) {
   String.prototype.format = function () {
     var val = this,
@@ -43,7 +46,7 @@ function wechatAPI() {
         },
         get_auth: function (companyId, callback) {
             this.post_data("/api/wechat/web/auth", {
-                url: "http://dtc.ocheng.me/h5/wxshop_private_order/html/orderActivity.html?cId="+cId,
+                url: URL+"wxshop_private_order/html/orderActivity.html?cId="+cId,
                 company_id: companyId
             }, function (data) {
                 if (data.code == 100000) {
@@ -128,7 +131,7 @@ function wechatAPI() {
 
         init_jssdk: function (call_back) {
             ///api/wechat/web/get/jssdk
-            this.post_data(API.gateway+"wechat/web/get/jssdk", {
+            this.post_data(API.gateway+"/wechat/web/get/jssdk", {
               url: this.get_url()
             }, function (data) {
 

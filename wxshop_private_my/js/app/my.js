@@ -5,7 +5,6 @@ var app = {
     wechat.init_auth(cId, function() {
       app.login();
       app.getUserInfo();
-      app.getDtcInfo();
       $("#invoice").on('click', app.goInvoice);
       $("#address").on('click', app.goAddress);
       $("#user").on('click', app.goUser);
@@ -36,20 +35,19 @@ var app = {
   // 获取用户信息
   getUserInfo: function() {
     var info = JSON.parse(localStorage.getItem('USERINFO'));
-    console.log(info);
     wechat.get_data(API.gateway + API.memberInfo + info.id, function(response) {
       if(response.code == ERR_OK) {
         localStorage.setItem('USERINFO', JSON.stringify(response.data));
         $('#head').attr("src", response.data.headImage);
         $('#nikeName').html(response.data.wxNickname);
-        $("#employeeName").html(response.data.employeeName);
+        $('#employeeName').html(response.data.name);
         if(wechatapi.check.isEmpty(response.data.tel)) {
           $('#tel').html('');
         } else {
           var tel = response.data.globalRoaming + response.data.tel;
           $('#tel').html(tel ? tel : "");
         }
-
+				app.getDtcInfo();
       }
     });
 

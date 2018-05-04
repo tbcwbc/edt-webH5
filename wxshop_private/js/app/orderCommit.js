@@ -187,8 +187,8 @@ var app = {
       priceSum += good.intMoney * good.counts;
     })
     return {
-      counts,
-      priceSum
+      "counts":counts,
+      "priceSum":priceSum
     };
   },
   check: function() {
@@ -270,7 +270,7 @@ var app = {
       }
     });
     //测试
-    const STOREID = 99999; //门店id 暂时固定
+    var STOREID = 99999; //门店id 暂时固定
 
     var memberId = app.userInfo.id;
     var memberNo = app.userInfo.memberNumber;

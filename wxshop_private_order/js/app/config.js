@@ -1,7 +1,7 @@
 var API = {
-//	gateway: 'http://wx.ocheng.me/api', // 域名
+	gateway: 'https://edrington.shop/api', // 域名
 
-	gateway: 'http://dtc.ocheng.me/api', // 域名
+//	gateway: 'http://dtc.ocheng.me/api', // 域名
 
   login: '/member/front/auto/login/', // 自动登录
   
@@ -9,7 +9,7 @@ var API = {
 
   productList: '/product/productInfo/lists', // 商品列表
   
-  productPrivateList: 'product/productInfo/private/lists', //private 商品列表
+  productPrivateList: '/product/productInfo/private/lists', //private 商品列表
 
   cityList: '/order/city/list/', // 城市列表  id = 1  默认请求省列表
 

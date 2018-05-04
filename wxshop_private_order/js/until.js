@@ -1,4 +1,4 @@
-const ERR_OK = 100000;
+var ERR_OK = 100000;
 var CNANNEL = 5;  //渠道：1线下 2线上 3 app 4 publicStore 5 privateStore 
 var wechatapi = (function() {
   return {

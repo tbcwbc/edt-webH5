@@ -50,7 +50,7 @@ var app = {
         var code = response.code;
         console.log(response);
         if(code == 100000) {
-          window.location.href = `address.html?cId=${cId}`;
+          window.location.href = "address.html?cId="+cId;
         } else {
           wechatapi.prompt(response.msg);
         }
